@@ -15,7 +15,7 @@ $Powerby 	= "อ.พี่เอก";
 
 // Database 
 $db_config = array(
-	"host" => "pohpunpanyafoundation.org",
+	"host" => "localhost",
 	"user" => "pohpun_web",
 	"pass" => "x@8Vk99c4",
 	"dbname" => "pohpun_web",
@@ -56,7 +56,7 @@ if ($status == true) {
 }
 
 // Display Error ,0=none display,1=display
-@ini_set('display_errors', '1');
+@ini_set('display_errors', '0');
 @set_time_limit(0);
 
 // MySQL Table
@@ -143,23 +143,3 @@ session_start();
 $conn = @new mysqli($db_config["host"], $db_config["user"], $db_config["pass"], $db_config["dbname"]);
 //$conn->set_charset($db_config["charset"]);
 
-/*
-
-if ($_SESSION["lang"] == "") {
-	$_SESSION["lang"] = "_th";
-}
-if ($_GET['lang'] != "") {
-	unset($_SESSION["lang"]);
-	if ($_GET['lang'] == "th") {
-		$_SESSION["lang"] = "_th";
-	} else {
-		$_SESSION["lang"] = "_eng";
-	}
-}
-*/
-// $_SESSION["lang"] ??= "_th";
-
-// if (isset($_GET['lang']) && $_GET['lang'] != "") {
-    // unset($_SESSION["lang"]);
-//     $_SESSION["lang"] = ($_GET['lang'] == "th") ? "_th" : "_eng";
-// }

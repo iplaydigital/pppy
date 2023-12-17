@@ -12,9 +12,6 @@ if($_POST['action']=='loadProvince'){
 	$result = $conn->query($query);
 	while($line = $result->fetch_assoc()){
 		array_push($arrayCampModel, '<a href="#" id="province'.$line['ID_PROVINCE'].'" data-title="'.$line['TITLE'].'" class="drp_province_list top w-dropdown-link" onclick="chooseCity('.$line['ID_PROVINCE'].')" >'.$line['TITLE'].'</a>');
-		// array_push($arrayCampModel, '<a href="#" class="drp_province_list top w-dropdown-link" onclick="chooseCity('.$line['ID_PROVINCE'].')" onmouseover="chooseCity('.$line['ID_PROVINCE'].')">'.$line['TITLE'].'</a>');
-		// array_push($arrayCampModel, '<a href="#" class="drp_province_list top w-dropdown-link" onclick="chooseCity('.$line['ID_PROVINCE'].')" onmouseover="chooseCity('.$line['ID_PROVINCE'].')">'.$line['TITLE'].'</a>');
-
 		$query2 = "SELECT main.*,a.*
 		FROM `$tableCampDistrict` as main 
 		LEFT JOIN `$tableCampDistrictDetail` as a ON a.ID_DISTRICT = main.ID";

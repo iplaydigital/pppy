@@ -1,7 +1,7 @@
 <?php error_reporting(E_ALL ^ E_NOTICE);
 
 include_once("include/config.inc.php");
-//include_once("include/class.inc.php");
+include_once("include/class.inc.php");
 include_once("include/class.TemplatePower.inc.php");
 include_once("include/function.inc.php");
 
@@ -65,14 +65,6 @@ $tpl->assign("_ROOT.arrayCampProvince",implode('', $arrayCampProvince));
 	while($line = $result->fetch_assoc()){
 		$ex = explode('=', $line['LINK']);
 		array_push($arrayCampSchool, '<a href="'.$url_main.'/schools/'.$ex[1].'" class="drp_school_list w-dropdown-link" onmouseover="viewSchool('.$line['ID_SCHOOL'].');" onmouseout="closeViewSchhol();" style="display: block;">'.$line['TITLE'].'</a>');
-		// array_push($arrayCampSchoolDetail, '<div class="tree treeModel'.$line['ID_MODEL'].' treeCity'.$line['ID_PROVINCE'].' treeDistrict'.$line['ID_DISTRICT'].' treeSchool'.$line['ID_SCHOOL'].'" id="tree'.$line['ID_SCHOOL'].'" data-modal="'.$line['ID_MODEL'].'" data-district="'.$line['ID_DISTRICT'].'" onmouseover="viewSchool('.$line['ID_SCHOOL'].');">
-    //       <div class="treeImg"><img src="images/tree.png"><span>'.$line['ID_SCHOOL'].'</span></div>
-    //       <div class="treeView treeViewSchool'.$line['ID_SCHOOL'].'">
-    //         <img src="images/tree_view.png"><span>'.$line['ID_SCHOOL'].'</span>
-    //         <h4>'.$line['TITLE'].'</h4>
-    //         <p>'.$line['DESC'].'<a href="'.$line['LINK'].'">เพิ่มเติม</a></p>
-    //       </div>
-    //     </div>');
 
 	}
 
@@ -158,13 +150,7 @@ $tpl->assign("_ROOT.arraySlideVdo",implode('', $arraySlideVdo));
 
 
 
-// $arrayNewsCategory = array();
-// $query = "SELECT * FROM `$tableNewsCategory` ORDER BY `ORDER` ASC ";
-// $result = $conn->query($query);
-// while($line = $result->fetch_assoc()){
 
-// 	array_push($arrayNewsCategory, '<a href="'.$line['URL'].'" class="nag-button w-button">'.$line['TITLE_'.$_SESSION['lagText']].'</a>');
-// }
 
 if($_SESSION['lagText']=="EN"){
 	$arrayNewsCategory = array('<a href="'.$url_main.'/news" class="nag-button w-button">News</a>','<a href="'.$url_main.'/blog" class="nag-button w-button">Blog</a>','<a href="'.$url_main.'/gallery" class="nag-button w-button">Gallery</a>');
