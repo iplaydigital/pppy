@@ -1,0 +1,66 @@
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^pohpunpanyafoundation\.org$
+RewriteRule (.*) https://www.pohpunpanyafoundation.org/$1 [R=301,L]
+
+ErrorDocument 404 /index.php
+#ErrorDocument 404 redirect /https://www.pohpunpanyafoundation.org
+
+#index
+		RewriteRule ^home$ index.php
+		RewriteRule ^knowus$ aboutus.php
+		RewriteRule ^รู้จักเรา$ aboutus.php
+		RewriteRule ^aboutus$ aboutus.php#pppyAboutus
+		RewriteRule ^เกี่ยวกับเรา$ aboutus.php#pppyAboutus
+		RewriteRule ^vision-mssion$ aboutus.php#pppyVission
+		RewriteRule ^วิสัยทัศน์และพันธกิจ$ aboutus.php#pppyVission
+
+		RewriteRule ^aboutus#pppyAboutus$ aboutus.php#pppyAboutus
+
+		RewriteRule ^foundation-board$ management.php
+		RewriteRule ^คณะกรรมการมูลนิธิ$ management.php
+
+		RewriteRule ^pohpunpanya-camp$ pohpunpanya-boothcamp1.php
+		RewriteRule ^โครงการเพาะพันธุ์ปัญญาแคมป์$ pohpunpanya-boothcamp1.php
+
+		RewriteRule ^schools$ school.php
+		RewriteRule ^โรงเรียนที่เข้าร่วม$ school.php
+		RewriteRule ^schools/([_a-zA-Z0-9ก-ะาิีุูเะแำไใๆ่้๊๋ั็์ึื-๙-]+)$  school-detail.php?id=$1
+
+
+		RewriteRule ^partners$ partners.php
+		RewriteRule ^พันธมิตรโครงการ$ partners.php
+
+		RewriteRule ^alumni-directory$ alumni-directory.php
+		RewriteRule ^พันธมิตรโครงการ$ alumni-directory.php
+
+		RewriteRule ^news-media$ news-media.php
+		RewriteRule ^ข่าวสารและมีเดีย$ news-media.php
+		RewriteRule ^news$ news.php
+		RewriteRule ^ข่าวสารกิจกรรม$ news.php
+		RewriteRule ^news/([_a-zA-Z0-9ก-ะาิีุูเะแำไใๆ่้๊๋ั็์ึื-๙-]+)$  detail.php?id=$1
+		RewriteRule ^blog$ blog.php
+		RewriteRule ^บทความ$ blog.php
+		RewriteRule ^blog/([_a-zA-Z0-9ก-ะาิีุูเะแำไใๆ่้๊๋ั็์ึื-๙-]+)$  detail.php?id=$1
+		RewriteRule ^gallery$ gallery.php
+		RewriteRule ^แกลลอรี่$ gallery.php
+
+		RewriteRule ^contactus$ contactus.php
+		RewriteRule ^ติดต่อเรา$ contactus.php
+
+		RewriteRule ^pdpa$ pdpa.php
+		RewriteRule ^pdpa$ pdpa.php
+
+
+#news
+#
+#		RewriteRule ^news news.php
+#		RewriteRule ^blog blog.php
+#		RewriteRule ^gallery gallery.php
+#		RewriteRule ^news-media news-media.php
+##		RewriteRule ^news/([_a-zA-Z0-9ก-ะาิีุูเะแำไใๆ่้๊๋ั็์ึื-๙-]+)$ news-detail.php?title=$1
+
+
+
+
+

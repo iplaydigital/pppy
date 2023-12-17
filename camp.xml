@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<document>
+
+<camp campId="1" title="รุ่นที่ 1/2566">
+	<province campId="1" provinceId="1" title="จ.น่าน">
+		<district campId="1" provinceId="1" districtId="1" title="อ. เชียงกลาง">
+			<school campId="1" provinceId="1" districtId="1" schoolId="1" title="รร. เชียงกลางประชาพัฒนา"></school>
+			<school campId="1" provinceId="1" districtId="1" schoolId="2" title="รร. พระธาตุพิทยาคม"></school>
+		</district>
+		<district campId="1" provinceId="1" districtId="2" title="อ. ท่าวังผา">
+			<school campId="1" provinceId="1" districtId="1" schoolId="3" title="รร. ท่าวังผาพิทยาคม"></school>
+		</district>
+	</province>
+</camp>
+
+<camp category="2" title="รุ่นที่ 2/2566">
+	<province category="2" title="จ.สงขลา">
+		<district category="3" title="อ. หาดใหญ่">
+			<school category="4" title="รร. แสงทอง"></school>
+			<school category="5" title="รร. ธิดา"></school>
+		</district>
+		<district category="4" title="อ. นาหม่อม">
+			<school category="6" title="รร. วัดนาหม่อม"></school>
+		</district>
+	</province>
+</camp>
+
+</document>    

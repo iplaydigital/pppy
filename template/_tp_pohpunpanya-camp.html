@@ -1,0 +1,376 @@
+
+<section class="keypageall">
+  <div class="w-layout-blockcontainer keypagecontainer w-container">
+    <h1 class="keypagetext">เพาะพันธุ์ปัญญาแคมป์</h1>
+  </div>
+</section>
+
+  <section class="pppy_all_camps">
+    <div class="container">
+    <div class="pppy_map_section w-row">
+      <div class="coldrop w-col w-col-6">
+        <div class="w-layout-blockcontainer container-19 w-container"><img src="images/logo_pppy_camplogo.png" loading="lazy" sizes="(max-width: 1439px) 20px, 1vw" srcset="images/logo_pppy_camplogo-p-500.png 500w, images/logo_pppy_camplogo.png 738w" alt="" class="pppycamp_1" style="width: 100%;">
+         <a href="pohpunpanya-boothcamp1.php" class="btn_pppy_map w-button">รายละเอียดโครงการ</a> 
+          <div data-hover="false" data-delay="0" class="dropdown_province w-dropdown" style="margin-bottom:0;">
+            <div class="drp_campep w-dropdown-toggle">
+              <div class="w-icon-dropdown-toggle"></div>
+              <div class="drp_camp_text" id="drp_camp_text_model">รุ่นที่ 1/2566</div>
+            </div>
+            <nav class="drp_campyep w-dropdown-list">
+              {arrayCampModel}
+            </nav>
+          </div>
+          <div data-hover="false" data-delay="0" class="dropdown_province w-dropdown" style="margin-bottom:0;">
+            <div class="drp_campep w-dropdown-toggle">
+              <div class="w-icon-dropdown-toggle"></div>
+              <div class="drp_camp_text" id="drp_camp_text_province">รายชื่อจังหวัด อำเภอ</div>
+            </div>
+            <nav class="drp_campyep w-dropdown-list" id="listProvince">
+              {arrayCampProvince}
+            </nav>
+          </div>
+          <div data-hover="false" data-delay="0" class="dropdown_schoollist w-dropdown" style="margin-bottom:0;">
+            <div class="drp_camp w-dropdown-toggle">
+              <div class="w-icon-dropdown-toggle"></div>
+              <div class="drp_camp_text">รายชื่อโรงเรียนที่เข้าร่วมโครงการ</div>
+            </div>
+            <nav class="drp_campschool w-dropdown-list" id="listSchool">
+              {arrayCampSchool}
+            </nav>
+          </div>
+          <!-- <div data-hover="false" data-delay="0" class="dropdown_pppypartner w-dropdown" style="margin-bottom:0;">
+            <div class="drp_camp w-dropdown-toggle">
+              <div class="w-icon-dropdown-toggle"></div>
+              <div class="drp_camp_text">พันธมิตรร่วมเพาะพันธุ์ปัญญา</div>
+            </div>
+            <nav class="drp_camppartner w-dropdown-list">
+              <a href="partners.php" class="drp_coat_detail w-dropdown-link">วิทยากร</a>
+              <a href="partners.php" class="drp_coat_detail w-dropdown-link">คณะกรรมการ</a>
+            </nav>
+          </div> -->
+          <a href="alumni-directory.php" class="btn_grad_pppy w-button" style="margin-top: 1px;">ทำเนียบรุ่นศิษย์เก่า เพาะพันธุ์ปัญญาแคมป์</a>
+        </div>
+      </div>
+<style>
+.w-dropdown {position: static;}
+.w-dropdown-list {min-width: auto;}
+.drp_campyep.w--open, .drp_campschool.w--open, .drp_camppartner.w--open {margin-bottom:0;position: absolute;min-width: 90%;z-index: 999;}
+</style>
+<style type="text/css">
+  .tree {display: none;}
+  .tree.treeDemo {display: none;}
+  .treeView {display: none;z-index: 99;position: absolute;width: 300px;border: 3px solid #119c4a;background-color: #ffffff;padding: 10px 10px 10px 70px;text-align: left;top: 3px;}
+  .treeView>img {position: absolute;left: -60px;bottom: -3px;height: 80px;}
+  .treeView>span {font-size: 40px;color: #fff;position: absolute;z-index: 9;top: 45%;left: -5%;}
+  .treeView>h4 {margin: 0;color: #119c4a;font-weight: bold;}
+  .treeView>p {margin: 0;} 
+  .treeView>p>a {margin: 0;color: #119c4a;} 
+  .btn_province {position: absolute;bottom: 25%;right: 5%;color: #ffffff;background-color: #837670;padding: 20px 20px;font-size: 30px;}
+/*  .pppy_map {height: 450px;}*/
+  .pppy_map_section {display: block;}
+  .pppy_slide2, .pppy_slide3 {text-align: center;}
+@media screen and (min-width: 375px){
+/*  .pppy_map {height: 540px;}*/
+  .btn_province {right: 10%;}
+}
+/*@media screen and (min-width: 425px){
+  .pppy_map {height: 600px;}
+}
+@media screen and (min-width: 768px){
+  .pppy_map {height: 700px;}
+}
+@media screen and (min-width: 1024px){
+  .pppy_map {height: 900px;}
+}*/
+@media screen and (min-width: 320px) {
+  .tree, .tree.treeDemo {position: absolute;}
+  .tree>.treeImg>img, .tree.treeDemo>img {width: 50px;}
+  .tree>.treeImg>span {font-size: 20px;color: #fff;position: absolute;z-index: 9;top: 16%;left: 37%;}
+  .treeView {width: 250px;}
+  .treeView>img {left: -45px;}
+  .treeView>span {top: 54%;font-size: 30px;}
+  #tree1 {top: 0;left: 0;margin: 24% 0 0 36%;}
+  #tree2 {top: 0;left: 0;margin: 20% 0 0 48%;}
+  #tree3 {top: 0;left: 0;margin: 37% 0 0 52%;}
+  #tree4 {top: 0;left: 0;margin: 40% 0 0 31%;}
+  #tree5 {top: 0;left: 0;margin: 58% 0 0 24%;}
+  #tree6 {top: 0;left: 0;margin: 80% 0 0 18%;}
+  #tree7 {top: 0;left: 0;margin: 85% 0 0 39%;}
+  #tree8 {top: 0;left: 0;margin: 114% 0 0 18%;}
+
+  .tree.treeDemo1 {top: 0;left: 0;margin: 15% 0 0 25%;}
+  .tree.treeDemo2 {top: 0;left: 0;margin: 10% 0 0 45%;}
+  .tree.treeDemo3 {top: 0;left: 0;margin: 15% 0 0 61%;}
+  .tree.treeDemo4 {top: 0;left: 0;margin: 23% 0 0 40%;}
+  .tree.treeDemo5 {top: 0;left: 0;margin: 40% 0 0 31%;}
+  .tree.treeDemo6 {top: 0;left: 0;margin: 37% 0 0 51%;}  
+  .tree.treeDemo7 {top: 0;left: 0;margin: 45% 0 0 68%;}  
+  .tree.treeDemo8 {top: 0;left: 0;margin: 55% 0 0 50%;}  
+  .tree.treeDemo9 {top: 0;left: 0;margin: 60% 0 0 7%;}  
+  .tree.treeDemo10 {top: 0;left: 0;margin: 58% 0 0 24%;}  
+  .tree.treeDemo11 {top: 0;left: 0;margin: 67% 0 0 39%;}  
+  .tree.treeDemo12 {top: 0;left: 0;margin: 72% 0 0 58%;}  
+  .tree.treeDemo13 {top: 0;left: 0;margin: 85% 0 0 28%;}
+  .tree.treeDemo14 {top: 0;left: 0;margin: 104% 0 0 30%;}
+  .tree.treeDemo15 {top: 0;left: 0;margin: 118% 0 0 20%;}
+
+}
+@media screen and (min-width: 375px) {
+  #tree1 {top: 0;left: 0;margin: 27% 0 0 37%;}
+  #tree2 {top: 0;left: 0;margin: 24% 0 0 48%;}
+  #tree3 {top: 0;left: 0;margin: 40% 0 0 52%;}
+  #tree4 {top: 0;left: 0;margin: 43% 0 0 32%;}
+  #tree5 {top: 0;left: 0;margin: 62% 0 0 26%;}
+  #tree6 {top: 0;left: 0;margin: 83% 0 0 18%;}
+  #tree7 {top: 0;left: 0;margin: 88% 0 0 39%;}
+  #tree8 {top: 0;left: 0;margin: 117% 0 0 20%;}
+
+  .tree.treeDemo1 {top: 0;left: 0;margin: 20% 0 0 25%;}
+  .tree.treeDemo2 {top: 0;left: 0;margin: 15% 0 0 45%;}
+  .tree.treeDemo3 {top: 0;left: 0;margin: 15% 0 0 61%;}
+  .tree.treeDemo4 {top: 0;left: 0;margin: 27% 0 0 40%;}
+  .tree.treeDemo5 {top: 0;left: 0;margin: 40% 0 0 31%;}
+  .tree.treeDemo6 {top: 0;left: 0;margin: 40% 0 0 51%;}  
+  .tree.treeDemo7 {top: 0;left: 0;margin: 45% 0 0 68%;}  
+  .tree.treeDemo8 {top: 0;left: 0;margin: 56% 0 0 50%;}  
+  .tree.treeDemo9 {top: 0;left: 0;margin: 60% 0 0 7%;}  
+  .tree.treeDemo10 {top: 0;left: 0;margin: 58% 0 0 24%;}  
+  .tree.treeDemo11 {top: 0;left: 0;margin: 67% 0 0 39%;}  
+  .tree.treeDemo12 {top: 0;left: 0;margin: 72% 0 0 58%;}  
+  .tree.treeDemo13 {top: 0;left: 0;margin: 85% 0 0 28%;}
+  .tree.treeDemo14 {top: 0;left: 0;margin: 104% 0 0 30%;}
+  .tree.treeDemo15 {top: 0;left: 0;margin: 118% 0 0 22%;}
+}
+@media screen and (min-width: 768px) {
+  #tree1 {top: 0;left: 0;margin: 38% 0 0 37%;}
+  #tree2 {top: 0;left: 0;margin: 31% 0 0 48%;}
+  #tree3 {top: 0;left: 0;margin: 52% 0 0 54%;}
+  #tree4 {top: 0;left: 0;margin: 52% 0 0 31%;}
+  #tree5 {top: 0;left: 0;margin: 80% 0 0 26%;}
+  #tree6 {top: 0;left: 0;margin: 115% 0 0 20%;}
+  #tree7 {top: 0;left: 0;margin: 120% 0 0 40%;}
+  #tree8 {top: 0;left: 0;margin: 160% 0 0 22%;}
+
+  .tree.treeDemo1 {top: 0;left: 0;margin: 20% 0 0 25%;}
+  .tree.treeDemo2 {top: 0;left: 0;margin: 15% 0 0 45%;}
+  .tree.treeDemo3 {top: 0;left: 0;margin: 15% 0 0 61%;}
+  .tree.treeDemo4 {top: 0;left: 0;margin: 35% 0 0 42%}
+  .tree.treeDemo5 {top: 0;left: 0;margin: 52% 0 0 31%;}
+  .tree.treeDemo6 {top: 0;left: 0;margin: 52% 0 0 54%;}  
+  .tree.treeDemo7 {top: 0;left: 0;margin: 60% 0 0 67%;}  
+  .tree.treeDemo8 {top: 0;left: 0;margin: 75% 0 0 50%;}  
+  .tree.treeDemo9 {top: 0;left: 0;margin: 80% 0 0 10%;}  
+  .tree.treeDemo10 {top: 0;left: 0;margin: 80% 0 0 26%;}  
+  .tree.treeDemo11 {top: 0;left: 0;margin: 92% 0 0 41%;}  
+  .tree.treeDemo12 {top: 0;left: 0;margin: 100% 0 0 60%;}  
+  .tree.treeDemo13 {top: 0;left: 0;margin: 120% 0 0 40%;}
+  .tree.treeDemo14 {top: 0;left: 0;margin: 140% 0 0 30%;}
+  .tree.treeDemo15 {top: 0;left: 0;margin: 160% 0 0 22%;}
+}
+@media screen and (min-width: 1024px) {
+  .treeView {width: 300px;}
+  .treeView>span {top: 54%;font-size: 40px;}
+  .tree>.treeImg>img, .tree.treeDemo>img {width: 70px;}
+  #tree1 {top: 0;left: 0;margin: 38% 0 0 37%;}
+  #tree2 {top: 0;left: 0;margin: 31% 0 0 48%;}
+  #tree3 {top: 0;left: 0;margin: 52% 0 0 54%;}
+  #tree4 {top: 0;left: 0;margin: 52% 0 0 31%;}
+  #tree5 {top: 0;left: 0;margin: 80% 0 0 26%;}
+  #tree6 {top: 0;left: 0;margin: 115% 0 0 20%;}
+  #tree7 {top: 0;left: 0;margin: 120% 0 0 40%;}
+  #tree8 {top: 0;left: 0;margin: 160% 0 0 22%;}
+
+  .tree.treeDemo1 {top: 0;left: 0;margin: 20% 0 0 25%;}
+  .tree.treeDemo2 {top: 0;left: 0;margin: 15% 0 0 45%;}
+  .tree.treeDemo3 {top: 0;left: 0;margin: 15% 0 0 61%;}
+  .tree.treeDemo4 {top: 0;left: 0;margin: 35% 0 0 42%}
+  .tree.treeDemo5 {top: 0;left: 0;margin: 52% 0 0 31%;}
+  .tree.treeDemo6 {top: 0;left: 0;margin: 52% 0 0 54%;}  
+  .tree.treeDemo7 {top: 0;left: 0;margin: 60% 0 0 67%;}  
+  .tree.treeDemo8 {top: 0;left: 0;margin: 75% 0 0 50%;}  
+  .tree.treeDemo9 {top: 0;left: 0;margin: 80% 0 0 10%;}  
+  .tree.treeDemo10 {top: 0;left: 0;margin: 80% 0 0 26%;}  
+  .tree.treeDemo11 {top: 0;left: 0;margin: 92% 0 0 41%;}  
+  .tree.treeDemo12 {top: 0;left: 0;margin: 100% 0 0 60%;}  
+  .tree.treeDemo13 {top: 0;left: 0;margin: 120% 0 0 40%;}
+  .tree.treeDemo14 {top: 0;left: 0;margin: 140% 0 0 30%;}
+  .tree.treeDemo15 {top: 0;left: 0;margin: 160% 0 0 22%;}
+}
+@media screen and (min-width: 1200px) {
+/*  .tree>.treeImg>img {width: 60px;}*/
+  .tree>.treeImg>span {font-size: 20px;color: #fff;position: absolute;z-index: 9;top: 20%;left: 37%;}
+  #tree1 {top: 0;left: 0;margin: 38% 0 0 37%;}
+  #tree2 {top: 0;left: 0;margin: 31% 0 0 48%;}
+  #tree3 {top: 0;left: 0;margin: 52% 0 0 54%;}
+  #tree4 {top: 0;left: 0;margin: 52% 0 0 31%;}
+  #tree5 {top: 0;left: 0;margin: 80% 0 0 26%;}
+  #tree6 {top: 0;left: 0;margin: 115% 0 0 20%;}
+  #tree7 {top: 0;left: 0;margin: 120% 0 0 40%;}
+  #tree8 {top: 0;left: 0;margin: 160% 0 0 22%;}
+}
+@media screen and (min-width: 1300px) {
+/*  .tree>.treeImg>img {width: 80px;}*/
+/*  .tree>.treeImg>span {font-size: 34px;color: #fff;position: absolute;z-index: 9;top: 25%;left: 37%;}*/
+  #tree1 {top: 0;left: 0;margin: 38% 0 0 37%;}
+  #tree2 {top: 0;left: 0;margin: 31% 0 0 48%;}
+  #tree3 {top: 0;left: 0;margin: 52% 0 0 54%;}
+  #tree4 {top: 0;left: 0;margin: 52% 0 0 31%;}
+  #tree5 {top: 0;left: 0;margin: 80% 0 0 26%;}
+  #tree6 {top: 0;left: 0;margin: 115% 0 0 20%;}
+  #tree7 {top: 0;left: 0;margin: 120% 0 0 40%;}
+  #tree8 {top: 0;left: 0;margin: 160% 0 0 22%;}
+}
+
+</style>
+<script type="text/javascript">
+  function chooseModal(argument) {
+    // $(".tree.treeDemo").hide();
+    // $(".treeModel"+argument).show();
+    $("#w-dropdown-list-3").removeClass('w--open');
+
+    $.ajax({
+      type: "POST",
+      url: "loadDataCamp.php",
+      data: 'action=loadProvince&model='+argument,
+      success: function(html){ 
+        // console.log(html)
+        // $("#message").html('บันทึกข้อมูลแล้ว');
+        const myArray = html.split("|");
+        $("#listProvince").html(myArray[0]);
+        $("#listSchool").html(myArray[1]);
+        // $("#listTree").html(myArray[2]);
+        // $("#listProvince").css(html);
+      },
+      beforeSend:function()
+      {
+        // $("#message").html('กำลังบันทึกข้อมูล');
+      }
+    });
+    // console.log(argument)
+    $("#drp_camp_text_model").html('รุ่นที่ '+argument);
+  }
+  function chooseModalOver(argument) {
+    // $(".tree.treeDemo").hide();
+    // $(".treeModel"+argument).show();
+    // $(".treeModel"+argument).css("display", "block");
+    // $("#drp_camp_text_model").html('รุ่นที่ '+argument);
+  }
+  function chooseCity(argument) {
+    // $(".tree").hide();
+    // $(".treeCity"+argument).show();
+    $("#listProvince").removeClass('w--open');
+    $.ajax({
+      type: "POST",
+      url: "loadDataCamp.php",
+      data: 'action=loadSchoolCity&province='+argument,
+      success: function(html){ 
+        // console.log(html)
+        // $("#message").html('บันทึกข้อมูลแล้ว');
+        $("#listSchool").html(html);
+        // $("#listSchool").css(html);
+      },
+      beforeSend:function()
+      {
+        // $("#message").html('กำลังบันทึกข้อมูล');
+      }
+    });
+    // console.log($("#province"+argument).data('title'))
+    $("#drp_camp_text_province").html($("#province"+argument).data('title'));
+  }
+  function chooseDistrict(argument) {
+    // $(".tree").hide();
+    // $(".treeDistrict"+argument).show();
+    $("#listProvince").removeClass('w--open');
+    $.ajax({
+      type: "POST",
+      url: "loadDataCamp.php",
+      data: 'action=loadSchool&district='+argument,
+      success: function(html){ 
+        // console.log(html)
+        // $("#message").html('บันทึกข้อมูลแล้ว');
+        $("#listSchool").html(html);
+        // $("#listSchool").css(html);
+      },
+      beforeSend:function()
+      {
+        // $("#message").html('กำลังบันทึกข้อมูล');
+      }
+    });
+    $("#drp_camp_text_province").html($("#district"+argument).data('title'));
+  }
+  function viewSchool(argument) {
+    $(".treeView").hide();
+    $(".treeViewSchool"+argument).show();
+  }
+  function closeViewSchhol(argument) {
+    $(".treeView").hide();
+  }
+</script>
+      <div class="colmap w-col w-col-6">
+        <div class="align-items-center">
+        <address id="pppy_mapblock" class="pppy_mapblock"><img src="images/map-nan2.png" loading="lazy" alt="" id="pppy-map" class="pppy_map"></address>
+        <!-- <div class="btn_province">จ.น่าน</div> -->
+        <div id="listTree">
+
+        </div>
+
+
+        <div class="tree treeDemo treeDemo1"><img src="images/tree.png"></div>
+        <div class="tree treeDemo treeDemo2"><img src="images/tree.png"></div>        
+        <div class="tree treeDemo treeDemo3"><img src="images/tree.png"></div>
+        <div class="tree treeDemo treeDemo4"><img src="images/tree.png"></div>
+        <div class="tree treeDemo treeDemo5"><img src="images/tree.png"></div>
+        <div class="tree treeDemo treeDemo6"><img src="images/tree.png"></div>
+        <div class="tree treeDemo treeDemo7"><img src="images/tree.png"></div>
+        <div class="tree treeDemo treeDemo8"><img src="images/tree.png"></div>
+        <div class="tree treeDemo treeDemo9"><img src="images/tree.png"></div>        
+        <div class="tree treeDemo treeDemo10"><img src="images/tree.png"></div>
+        <div class="tree treeDemo treeDemo11"><img src="images/tree.png"></div>
+        <div class="tree treeDemo treeDemo12"><img src="images/tree.png"></div>
+        <div class="tree treeDemo treeDemo13"><img src="images/tree.png"></div>
+        <div class="tree treeDemo treeDemo14"><img src="images/tree.png"></div>
+        <div class="tree treeDemo treeDemo15"><img src="images/tree.png"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="newsandmedia">
+    <div class="container-_index_vdo">
+      <a href="news-media" class="nag-buttontop w-button">ข่าวสารและมีเดีย</a>
+      <div class="w-layout-blockcontainer container-6 w-container">
+        {arrayNewsCategory}
+      </div>
+      <div data-delay="4000" data-animation="slide" class="team-slider-wrapper-4 w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="12" data-duration="500" data-infinite="true">
+        <div class="w-slider-mask">
+          <!-- START BLOCK : LISTNEWS -->
+          <div class="team-slide-wrapper-3 w-slide">
+            <div class="mediablockcard"><a href='detail.php?id={id}'>
+              <img src="{img}" loading="lazy" sizes="(max-width: 479px) 94vw, (max-width: 767px) 45vw, (max-width: 991px) 43vw,
+               (max-width: 1439px) 28vw, 282px" srcset="{img} 500w, {img} 800w, {img} 1080w" alt="" class="mediaphotocard">
+               </a>
+              <div class="mediablockinfo">
+                <p class="mediatypedate"><strong>{titlecat}</strong> | {date}</p>
+                <h3 class="mediaheadinfo">{title}</h3>
+                <p class="mediasubdetail">{desc}</p>
+                <a href="detail.php?id={id}" class="mediabuttonread w-button">อ่านต่อ</a>
+              </div>
+            </div>
+          </div>
+          <!-- END BLOCK : LISTNEWS -->
+
+        </div>
+        <div class="team-slider-arrow-3 w-slider-arrow-left">
+          <div class="w-icon-slider-left"></div>
+        </div>
+        <div class="team-slider-arrow-3 w-slider-arrow-right">
+          <div class="w-icon-slider-right"></div>
+        </div>
+        <div class="mediaslidnav w-slider-nav w-slider-nav-invert w-round"></div>
+      </div>
+    </div>
+  </section>
+
+
+

@@ -1,0 +1,34 @@
+
+<section class="keypageall">
+  <div class="w-layout-blockcontainer keypagecontainer w-container">
+    <h1 class="keypagetext">ข่าวสาร</h1>
+  </div>
+</section>
+<section class="newsandmedia">
+  <div class="container-_index_vdo">
+    <a href="{url_main}/news-media" class="nag-buttontop w-button">ข่าวสารและมีเดีย</a>
+    <div class="w-layout-blockcontainer container-6 w-container">
+      {arrayNewsCategory}
+    </div>
+    <div class="w-layout-grid grid3block">
+
+      <!-- START BLOCK : LISTNEWS -->
+
+      <div class="mediablockcard"><a href='{url_main}/news/{id}'>
+        <img src="{img}" loading="lazy" sizes="(max-width: 479px) 94vw, (max-width: 767px) 45vw, (max-width: 991px) 43vw,
+         (max-width: 1439px) 28vw, 282px" srcset="{img} 500w, {img} 800w, {img} 1080w" alt="" class="mediaphotocard">
+         </a>
+        <div class="mediablockinfo">
+          <p class="mediatypedate"><strong>{titlecat}</strong> | {date}</p>
+          <h3 class="mediaheadinfo">{title}</h3>
+          <p class="mediasubdetail">{desc}</p>
+          <a href="{url_main}/news/{id}" class="mediabuttonread w-button">อ่านต่อ</a>
+        </div>
+      </div>
+
+
+      <!-- END BLOCK : LISTNEWS -->
+
+    </div>
+  </div>
+</section>
