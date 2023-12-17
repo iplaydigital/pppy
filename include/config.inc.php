@@ -28,7 +28,7 @@ $db_config = array(
 date_default_timezone_set("Asia/Bangkok");
 $strDateTime  = date("Y-m-d h:i:s");
 $tnow          = date("h:i:s");
-$url_main = 'https://dev.pohpunpanyafoundation.org';
+$url_main = 'https://code.pohpunpanyafoundation.org';
 
 
 $iPod = stripos($_SERVER['HTTP_USER_AGENT'], "iPod");
@@ -52,7 +52,7 @@ if ($iPod || $iPhone) {
 	//were a webOS device -- do something here
 }
 if ($status == true) {
-	//	header( 'Location: https://pppy.uarea.in/office/' ) ;
+	//	header( '#' ) ;
 }
 
 // Display Error ,0=none display,1=display
