@@ -124,13 +124,13 @@ $tpl->assign("_ROOT.arraySlide",implode('', $arraySlide));
 
 
 
-
+    $lag = settype($_SESSION['lag'], "integer");
 
 	
 	$query = "SELECT main.*,a.*
 	FROM `$tableIndexSlideVdo` as main 
 	LEFT JOIN `$tableIndexSlideVdoDetail` as a ON a.ID_SLIDE = main.ID ";
-	$query .= " WHERE main.DEL = '0' AND main.STATUS = 'Show' AND a.LAG = '".$_SESSION['lag']."' ORDER BY main.ORDER DESC ";
+	$query .= " WHERE main.DEL = '0' AND main.STATUS = 'Show' AND a.LAG = '".$lag."' ORDER BY main.ORDER DESC ";
 
 
 	
