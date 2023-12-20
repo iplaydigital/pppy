@@ -199,5 +199,6 @@ while($line = $result->fetch_assoc()){
 
 
 FRONTPAGESEO('1',$_SESSION['lag']);
+echo $lag+1;
 $tpl->printToScreen();
 
