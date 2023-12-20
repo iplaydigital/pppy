@@ -56,7 +56,7 @@ if ($status == true) {
 }
 
 // Display Error ,0=none display,1=display
-@ini_set('display_errors', '1');
+@ini_set('display_errors', '0');
 @set_time_limit(0);
 
 // MySQL Table
@@ -85,9 +85,9 @@ $tableSetting						= 	"tb_setting";
 $tableIndexSlide					= 	"tb_index_main_slide";
 $tableIndexSlideDetail				= 	"tb_index_main_slide_detail";
 $tableIndexSlideVdo					= 	"tb_index_main_slide_vdo";
-$tableIndexSlideVdoDetail			= 	"tb_index_main_slide_vdo_detail";
-$tableIndexSlideCamp				= 	"tb_index_main_slide_camp";
-$tableIndexSlideCampDetail			= 	"tb_index_main_slide_camp_detail";
+$tableIndexSlideVdoDetail				= 	"tb_index_main_slide_vdo_detail";
+$tableIndexSlideCamp					= 	"tb_index_main_slide_camp";
+$tableIndexSlideCampDetail				= 	"tb_index_main_slide_camp_detail";
 
 
 
@@ -106,6 +106,9 @@ $tableTask							=   "tb_task";
 
 
 $tableContents 						= 	"tb_contents_detail";
+$tableCustomers						= 	"tb_customers";
+$tableAgents						= 	"tb_agents";
+
 
 $tableProvince						=	"tb_province";
 $tableAmphur						=	"tb_amphur";
@@ -128,7 +131,7 @@ $cfgOtherRowPerPage = 15;
 
 // Session
 if (substr_count($_SERVER["SCRIPT_NAME"], "/") == 1) {
-	//session_name("pppy");
+	session_name("pppy");
 }
 
 session_start();
