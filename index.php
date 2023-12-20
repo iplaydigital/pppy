@@ -126,7 +126,7 @@ $tpl->assign("_ROOT.arraySlide",implode('', $arraySlide));
 	$result = $conn->query($query);
 	while($line = $result->fetch_assoc()){
 		$SlideVdo++;
-		array_push($arraySlideVdo, '<div class="pppy_slide'.$SlideVdo.' w-slide">
+		array_push($arraySlideVdo, '<div class="pppy_slide1 w-slide">
             <a href="#" class="w-inline-block w-lightbox"><img src="'.$url_main.'/upload/slideVdo/'.$line['BANNER_NAME'].'" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 991px) 92vw, (max-width: 1439px) 94vw, 940px" srcset="'.$url_main.'/upload/slideVdo/'.$line['BANNER_500'].' 500w, '.$url_main.'/upload/slideVdo/'.$line['BANNER_800'].' 800w, '.$url_main.'/upload/slideVdo/'.$line['BANNER_940'].'" alt="">
               <script type="application/json" class="w-json">{
   "items": [
