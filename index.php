@@ -132,7 +132,7 @@ $tpl->assign("_ROOT.arraySlide",implode('', $arraySlide));
 	LEFT JOIN `$tableIndexSlideVdoDetail` as a ON a.ID_SLIDE = main.ID ";
 	$query .= " WHERE main.DEL = '0' AND main.STATUS = 'Show' AND a.LAG = '?' ORDER BY main.ORDER DESC ";
 	
-	$stmt = $db->prepare($query);
+	$stmt = $conn->prepare($query);
 	$stmt->bind_param('s', $_SESSION['lag']); // 's' specifies the variable type => 'string'
 	$stmt->execute();
 	$result = $stmt->get_result();
