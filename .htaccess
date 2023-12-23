@@ -51,6 +51,8 @@ ErrorDocument 404 /index.php
 		RewriteRule ^pdpa$ pdpa.php
 		RewriteRule ^pdpa$ pdpa.php
 
+		RewriteRule ^loadData$ loadDataCamp.php
+
 
 #news
 #
