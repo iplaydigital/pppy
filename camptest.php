@@ -6,24 +6,6 @@ $arrayCampDistrict = array();
 $arrayCampSchool = array();
 
 $xml=simplexml_load_file("camp.xml") or die("Error: Cannot create object");
-// foreach($xml->children() as $camp) {
-//   echo $camp['title'];
-//   echo "<br>";
-//   array_push($arrayCampModel,$camp['title']);
-//   foreach($camp->children() as $province) {
-//     echo $province['title'];
-//     echo "<br>";
-//     foreach($province->children() as $district) {
-//       echo $district['title'];
-//       echo "<br>";
-//       foreach($district->children() as $school) {
-//         echo $school['title'];
-//         echo "<br>";
-//       }      
-//     }
-//   }
-// }
-
 echo "<br>----------------------------------------<br>";
 
 foreach($xml->children() as $camp) {
