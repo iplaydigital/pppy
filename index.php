@@ -1,5 +1,4 @@
-<?php
-error_reporting(E_ALL ^ E_NOTICE);
+<?php error_reporting (E_ALL ^ E_NOTICE);
 
 include_once("include/config.inc.php");
 include_once("include/class.inc.php");
@@ -10,18 +9,17 @@ $tpl = new TemplatePower("template/_tp_master.html");
 $tpl->assignInclude("body", "template/_tp_index.html");
 $tpl->prepare();
 
-// Set language session variable
-if (isset($_POST['language'])) {
+if (is_int($_POST['language'])) {
     $_SESSION['lag'] = $_POST['language'];
 } elseif (!isset($_SESSION['lag'])) {
+    $_SESSION['lag'] = '1';
+}else{
     $_SESSION['lag'] = '1';
 }
 
 FRONTLANGUAGE($_SESSION['lag']);
 
-// ... (rest of the code remains unchanged)
 
-// Fixed: CampProvince SQL Injection | 21122023 by P'Ake
 $arrayCampProvince = array();
 $query = "SELECT main.*,a.*
     FROM `$tableCampProvince` as main 

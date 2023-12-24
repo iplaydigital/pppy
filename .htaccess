@@ -52,7 +52,7 @@ ErrorDocument 404 /index.php
 		RewriteRule ^pdpa$ pdpa.php
 
 		RewriteRule ^loadData$ loadDataCamp.php
-
+		RewriteRule ^404$ 404.php
 
 #news
 #
