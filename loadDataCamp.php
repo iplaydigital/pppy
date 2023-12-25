@@ -23,7 +23,7 @@ if ($_POST['action'] == 'loadProvince') {
 
     $stmt->close();
 
-    // Rest of the code...
+   
 }
 
 

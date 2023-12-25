@@ -1,0 +1,1215 @@
+<section class="banner_slider">
+    <div data-delay="4000" data-animation="over" class="banner_slider w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="true" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+        <div class="w-slider-mask">
+            {arraySlide}
+        </div>
+        <div class="left-arrow w-slider-arrow-left">
+            <div class="icon w-icon-slider-left"></div>
+        </div>
+        <div class="right-arrow w-slider-arrow-right">
+            <div class="icon-2 w-icon-slider-right"></div>
+        </div>
+        <div class="slide-nav w-slider-nav w-slider-nav-invert w-round"></div>
+    </div>
+</section>
+
+
+<section class="vdo_gallery">
+    <div class="container-_index_vdo">
+        <h5 class="centered-headingvdo">วิดีโอแกลลอรี่</h5>
+        <div data-delay="4000" data-animation="slide" class="slider-3 w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+            <div class="mask-3 w-slider-mask">
+
+                {arraySlideVdo}
+
+            </div>
+            <div class="left-arrow-2 w-slider-arrow-left">
+                <div class="icon-6 w-icon-slider-left"></div>
+            </div>
+            <div class="right-arrow-3 w-slider-arrow-right">
+                <div class="icon-7 w-icon-slider-right"></div>
+            </div>
+            <div class="slide-nav-3 w-slider-nav w-slider-nav-invert w-round"></div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="pppy_all_camps">
+    <div class="container">
+        <div class="pppy_map_section w-row">
+            <div class="coldrop w-col w-col-6">
+                <div class="w-layout-blockcontainer container-19 w-container"><img src="images/logo_pppy_camplogo.png" loading="lazy" sizes="(max-width: 1439px) 20px, 1vw" srcset="images/logo_pppy_camplogo-p-500.png 500w, images/logo_pppy_camplogo.png 738w" alt="" class="pppycamp_1" style="width: 100%;">
+                    <a href="{url_main}/pohpunpanya-camp" class="btn_pppy_map w-button">รายละเอียดโครงการ</a>
+                    <div data-hover="false" data-delay="0" class="dropdown_province w-dropdown" style="margin-bottom:0;">
+                        <div class="drp_campep w-dropdown-toggle">
+                            <div class="w-icon-dropdown-toggle"></div>
+                            <div class="drp_camp_text" id="drp_camp_text_model">รุ่นที่ 1/2566</div>
+                        </div>
+                        <nav class="drp_campyep w-dropdown-list">
+                            {arrayCampModel}
+                        </nav>
+                    </div>
+                    <div data-hover="false" data-delay="0" class="dropdown_province w-dropdown" style="margin-bottom:0;">
+                        <div class="drp_campep w-dropdown-toggle">
+                            <div class="w-icon-dropdown-toggle"></div>
+                            <div class="drp_camp_text" id="drp_camp_text_province">รายชื่อจังหวัด อำเภอ</div>
+                        </div>
+                        <nav class="drp_campyep w-dropdown-list" id="listProvince">
+                            {arrayCampProvince}
+                        </nav>
+                    </div>
+                    <div data-hover="false" data-delay="0" class="dropdown_schoollist w-dropdown" style="margin-bottom:0;">
+                        <div class="drp_camp w-dropdown-toggle">
+                            <div class="w-icon-dropdown-toggle"></div>
+                            <div class="drp_camp_text">รายชื่อโรงเรียนที่เข้าร่วมโครงการ</div>
+                        </div>
+                        <nav class="drp_campschool w-dropdown-list" id="listSchool">
+                            {arrayCampSchool}
+                        </nav>
+                    </div>
+                    <a href="{url_main}/alumni-directory" class="btn_grad_pppy w-button" style="margin-top: 1px;">ทำเนียบรุ่นศิษย์เก่า เพาะพันธุ์ปัญญาแคมป์</a>
+                </div>
+            </div>
+            <style>
+                .w-dropdown {
+                    position: static;
+                }
+                
+                .w-dropdown-list {
+                    min-width: auto;
+                }
+                
+                .drp_campyep.w--open,
+                .drp_campschool.w--open,
+                .drp_camppartner.w--open {
+                    margin-bottom: 0;
+                    position: absolute;
+                    min-width: 90%;
+                    z-index: 999;
+                }
+            </style>
+            <style type="text/css">
+                .tree {
+                    display: none;
+                }
+                
+                .tree.treeDemo {
+                    display: none;
+                }
+                
+                .treeView {
+                    display: none;
+                    z-index: 99;
+                    position: absolute;
+                    width: 300px;
+                    border: 3px solid #119c4a;
+                    background-color: #ffffff;
+                    padding: 10px 10px 10px 70px;
+                    text-align: left;
+                    top: 3px;
+                }
+                
+                .treeView>img {
+                    position: absolute;
+                    left: -60px;
+                    bottom: -3px;
+                    height: 80px;
+                }
+                
+                .treeView>span {
+                    font-size: 40px;
+                    color: #fff;
+                    position: absolute;
+                    z-index: 9;
+                    top: 45%;
+                    left: -5%;
+                }
+                
+                .treeView>h4 {
+                    margin: 0;
+                    color: #119c4a;
+                    font-weight: bold;
+                }
+                
+                .treeView>p {
+                    margin: 0;
+                }
+                
+                .treeView>p>a {
+                    margin: 0;
+                    color: #119c4a;
+                }
+                
+                .btn_province {
+                    position: absolute;
+                    bottom: 25%;
+                    right: 5%;
+                    color: #ffffff;
+                    background-color: #837670;
+                    padding: 20px 20px;
+                    font-size: 30px;
+                }
+                /*  .pppy_map {height: 450px;}*/
+                
+                .pppy_map_section {
+                    display: block;
+                }
+                
+                .pppy_slide2,
+                .pppy_slide3 {
+                    text-align: center;
+                }
+                
+                @media screen and (min-width: 375px) {
+                    /*  .pppy_map {height: 540px;}*/
+                    .btn_province {
+                        right: 10%;
+                    }
+                }
+                /*@media screen and (min-width: 425px){
+  .pppy_map {height: 600px;}
+}
+@media screen and (min-width: 768px){
+  .pppy_map {height: 700px;}
+}
+@media screen and (min-width: 1024px){
+  .pppy_map {height: 900px;}
+}*/
+                
+                @media screen and (min-width: 320px) {
+                    .tree,
+                    .tree.treeDemo {
+                        position: absolute;
+                    }
+                    .tree>.treeImg>img,
+                    .tree.treeDemo>img {
+                        width: 50px;
+                    }
+                    .tree>.treeImg>span {
+                        font-size: 20px;
+                        color: #fff;
+                        position: absolute;
+                        z-index: 9;
+                        top: 16%;
+                        left: 37%;
+                    }
+                    .treeView {
+                        width: 250px;
+                    }
+                    .treeView>img {
+                        left: -45px;
+                    }
+                    .treeView>span {
+                        top: 54%;
+                        font-size: 30px;
+                    }
+                    #tree1 {
+                        top: 0;
+                        left: 0;
+                        margin: 24% 0 0 36%;
+                    }
+                    #tree2 {
+                        top: 0;
+                        left: 0;
+                        margin: 20% 0 0 48%;
+                    }
+                    #tree3 {
+                        top: 0;
+                        left: 0;
+                        margin: 37% 0 0 52%;
+                    }
+                    #tree4 {
+                        top: 0;
+                        left: 0;
+                        margin: 40% 0 0 31%;
+                    }
+                    #tree5 {
+                        top: 0;
+                        left: 0;
+                        margin: 58% 0 0 24%;
+                    }
+                    #tree6 {
+                        top: 0;
+                        left: 0;
+                        margin: 80% 0 0 18%;
+                    }
+                    #tree7 {
+                        top: 0;
+                        left: 0;
+                        margin: 85% 0 0 39%;
+                    }
+                    #tree8 {
+                        top: 0;
+                        left: 0;
+                        margin: 114% 0 0 18%;
+                    }
+                    .tree.treeDemo1 {
+                        top: 0;
+                        left: 0;
+                        margin: 15% 0 0 25%;
+                    }
+                    .tree.treeDemo2 {
+                        top: 0;
+                        left: 0;
+                        margin: 10% 0 0 45%;
+                    }
+                    .tree.treeDemo3 {
+                        top: 0;
+                        left: 0;
+                        margin: 15% 0 0 61%;
+                    }
+                    .tree.treeDemo4 {
+                        top: 0;
+                        left: 0;
+                        margin: 23% 0 0 40%;
+                    }
+                    .tree.treeDemo5 {
+                        top: 0;
+                        left: 0;
+                        margin: 40% 0 0 31%;
+                    }
+                    .tree.treeDemo6 {
+                        top: 0;
+                        left: 0;
+                        margin: 37% 0 0 51%;
+                    }
+                    .tree.treeDemo7 {
+                        top: 0;
+                        left: 0;
+                        margin: 45% 0 0 68%;
+                    }
+                    .tree.treeDemo8 {
+                        top: 0;
+                        left: 0;
+                        margin: 55% 0 0 50%;
+                    }
+                    .tree.treeDemo9 {
+                        top: 0;
+                        left: 0;
+                        margin: 60% 0 0 7%;
+                    }
+                    .tree.treeDemo10 {
+                        top: 0;
+                        left: 0;
+                        margin: 58% 0 0 24%;
+                    }
+                    .tree.treeDemo11 {
+                        top: 0;
+                        left: 0;
+                        margin: 67% 0 0 39%;
+                    }
+                    .tree.treeDemo12 {
+                        top: 0;
+                        left: 0;
+                        margin: 72% 0 0 58%;
+                    }
+                    .tree.treeDemo13 {
+                        top: 0;
+                        left: 0;
+                        margin: 85% 0 0 28%;
+                    }
+                    .tree.treeDemo14 {
+                        top: 0;
+                        left: 0;
+                        margin: 104% 0 0 30%;
+                    }
+                    .tree.treeDemo15 {
+                        top: 0;
+                        left: 0;
+                        margin: 118% 0 0 20%;
+                    }
+                }
+                
+                @media screen and (min-width: 375px) {
+                    #tree1 {
+                        top: 0;
+                        left: 0;
+                        margin: 27% 0 0 37%;
+                    }
+                    #tree2 {
+                        top: 0;
+                        left: 0;
+                        margin: 24% 0 0 48%;
+                    }
+                    #tree3 {
+                        top: 0;
+                        left: 0;
+                        margin: 40% 0 0 52%;
+                    }
+                    #tree4 {
+                        top: 0;
+                        left: 0;
+                        margin: 43% 0 0 32%;
+                    }
+                    #tree5 {
+                        top: 0;
+                        left: 0;
+                        margin: 62% 0 0 26%;
+                    }
+                    #tree6 {
+                        top: 0;
+                        left: 0;
+                        margin: 83% 0 0 18%;
+                    }
+                    #tree7 {
+                        top: 0;
+                        left: 0;
+                        margin: 88% 0 0 39%;
+                    }
+                    #tree8 {
+                        top: 0;
+                        left: 0;
+                        margin: 117% 0 0 20%;
+                    }
+                    .tree.treeDemo1 {
+                        top: 0;
+                        left: 0;
+                        margin: 20% 0 0 25%;
+                    }
+                    .tree.treeDemo2 {
+                        top: 0;
+                        left: 0;
+                        margin: 15% 0 0 45%;
+                    }
+                    .tree.treeDemo3 {
+                        top: 0;
+                        left: 0;
+                        margin: 15% 0 0 61%;
+                    }
+                    .tree.treeDemo4 {
+                        top: 0;
+                        left: 0;
+                        margin: 27% 0 0 40%;
+                    }
+                    .tree.treeDemo5 {
+                        top: 0;
+                        left: 0;
+                        margin: 40% 0 0 31%;
+                    }
+                    .tree.treeDemo6 {
+                        top: 0;
+                        left: 0;
+                        margin: 40% 0 0 51%;
+                    }
+                    .tree.treeDemo7 {
+                        top: 0;
+                        left: 0;
+                        margin: 45% 0 0 68%;
+                    }
+                    .tree.treeDemo8 {
+                        top: 0;
+                        left: 0;
+                        margin: 56% 0 0 50%;
+                    }
+                    .tree.treeDemo9 {
+                        top: 0;
+                        left: 0;
+                        margin: 60% 0 0 7%;
+                    }
+                    .tree.treeDemo10 {
+                        top: 0;
+                        left: 0;
+                        margin: 58% 0 0 24%;
+                    }
+                    .tree.treeDemo11 {
+                        top: 0;
+                        left: 0;
+                        margin: 67% 0 0 39%;
+                    }
+                    .tree.treeDemo12 {
+                        top: 0;
+                        left: 0;
+                        margin: 72% 0 0 58%;
+                    }
+                    .tree.treeDemo13 {
+                        top: 0;
+                        left: 0;
+                        margin: 85% 0 0 28%;
+                    }
+                    .tree.treeDemo14 {
+                        top: 0;
+                        left: 0;
+                        margin: 104% 0 0 30%;
+                    }
+                    .tree.treeDemo15 {
+                        top: 0;
+                        left: 0;
+                        margin: 118% 0 0 22%;
+                    }
+                }
+                
+                @media screen and (min-width: 768px) {
+                    #tree1 {
+                        top: 0;
+                        left: 0;
+                        margin: 38% 0 0 37%;
+                    }
+                    #tree2 {
+                        top: 0;
+                        left: 0;
+                        margin: 31% 0 0 48%;
+                    }
+                    #tree3 {
+                        top: 0;
+                        left: 0;
+                        margin: 52% 0 0 54%;
+                    }
+                    #tree4 {
+                        top: 0;
+                        left: 0;
+                        margin: 52% 0 0 31%;
+                    }
+                    #tree5 {
+                        top: 0;
+                        left: 0;
+                        margin: 80% 0 0 26%;
+                    }
+                    #tree6 {
+                        top: 0;
+                        left: 0;
+                        margin: 115% 0 0 20%;
+                    }
+                    #tree7 {
+                        top: 0;
+                        left: 0;
+                        margin: 120% 0 0 40%;
+                    }
+                    #tree8 {
+                        top: 0;
+                        left: 0;
+                        margin: 160% 0 0 22%;
+                    }
+                    .tree.treeDemo1 {
+                        top: 0;
+                        left: 0;
+                        margin: 20% 0 0 25%;
+                    }
+                    .tree.treeDemo2 {
+                        top: 0;
+                        left: 0;
+                        margin: 15% 0 0 45%;
+                    }
+                    .tree.treeDemo3 {
+                        top: 0;
+                        left: 0;
+                        margin: 15% 0 0 61%;
+                    }
+                    .tree.treeDemo4 {
+                        top: 0;
+                        left: 0;
+                        margin: 35% 0 0 42%
+                    }
+                    .tree.treeDemo5 {
+                        top: 0;
+                        left: 0;
+                        margin: 52% 0 0 31%;
+                    }
+                    .tree.treeDemo6 {
+                        top: 0;
+                        left: 0;
+                        margin: 52% 0 0 54%;
+                    }
+                    .tree.treeDemo7 {
+                        top: 0;
+                        left: 0;
+                        margin: 60% 0 0 67%;
+                    }
+                    .tree.treeDemo8 {
+                        top: 0;
+                        left: 0;
+                        margin: 75% 0 0 50%;
+                    }
+                    .tree.treeDemo9 {
+                        top: 0;
+                        left: 0;
+                        margin: 80% 0 0 10%;
+                    }
+                    .tree.treeDemo10 {
+                        top: 0;
+                        left: 0;
+                        margin: 80% 0 0 26%;
+                    }
+                    .tree.treeDemo11 {
+                        top: 0;
+                        left: 0;
+                        margin: 92% 0 0 41%;
+                    }
+                    .tree.treeDemo12 {
+                        top: 0;
+                        left: 0;
+                        margin: 100% 0 0 60%;
+                    }
+                    .tree.treeDemo13 {
+                        top: 0;
+                        left: 0;
+                        margin: 120% 0 0 40%;
+                    }
+                    .tree.treeDemo14 {
+                        top: 0;
+                        left: 0;
+                        margin: 140% 0 0 30%;
+                    }
+                    .tree.treeDemo15 {
+                        top: 0;
+                        left: 0;
+                        margin: 160% 0 0 22%;
+                    }
+                }
+                
+                @media screen and (min-width: 1024px) {
+                    .treeView {
+                        width: 300px;
+                    }
+                    .treeView>span {
+                        top: 54%;
+                        font-size: 40px;
+                    }
+                    .tree>.treeImg>img,
+                    .tree.treeDemo>img {
+                        width: 70px;
+                    }
+                    #tree1 {
+                        top: 0;
+                        left: 0;
+                        margin: 38% 0 0 37%;
+                    }
+                    #tree2 {
+                        top: 0;
+                        left: 0;
+                        margin: 31% 0 0 48%;
+                    }
+                    #tree3 {
+                        top: 0;
+                        left: 0;
+                        margin: 52% 0 0 54%;
+                    }
+                    #tree4 {
+                        top: 0;
+                        left: 0;
+                        margin: 52% 0 0 31%;
+                    }
+                    #tree5 {
+                        top: 0;
+                        left: 0;
+                        margin: 80% 0 0 26%;
+                    }
+                    #tree6 {
+                        top: 0;
+                        left: 0;
+                        margin: 115% 0 0 20%;
+                    }
+                    #tree7 {
+                        top: 0;
+                        left: 0;
+                        margin: 120% 0 0 40%;
+                    }
+                    #tree8 {
+                        top: 0;
+                        left: 0;
+                        margin: 160% 0 0 22%;
+                    }
+                    .tree.treeDemo1 {
+                        top: 0;
+                        left: 0;
+                        margin: 20% 0 0 25%;
+                    }
+                    .tree.treeDemo2 {
+                        top: 0;
+                        left: 0;
+                        margin: 15% 0 0 45%;
+                    }
+                    .tree.treeDemo3 {
+                        top: 0;
+                        left: 0;
+                        margin: 15% 0 0 61%;
+                    }
+                    .tree.treeDemo4 {
+                        top: 0;
+                        left: 0;
+                        margin: 35% 0 0 42%
+                    }
+                    .tree.treeDemo5 {
+                        top: 0;
+                        left: 0;
+                        margin: 52% 0 0 31%;
+                    }
+                    .tree.treeDemo6 {
+                        top: 0;
+                        left: 0;
+                        margin: 52% 0 0 54%;
+                    }
+                    .tree.treeDemo7 {
+                        top: 0;
+                        left: 0;
+                        margin: 60% 0 0 67%;
+                    }
+                    .tree.treeDemo8 {
+                        top: 0;
+                        left: 0;
+                        margin: 75% 0 0 50%;
+                    }
+                    .tree.treeDemo9 {
+                        top: 0;
+                        left: 0;
+                        margin: 80% 0 0 10%;
+                    }
+                    .tree.treeDemo10 {
+                        top: 0;
+                        left: 0;
+                        margin: 80% 0 0 26%;
+                    }
+                    .tree.treeDemo11 {
+                        top: 0;
+                        left: 0;
+                        margin: 92% 0 0 41%;
+                    }
+                    .tree.treeDemo12 {
+                        top: 0;
+                        left: 0;
+                        margin: 100% 0 0 60%;
+                    }
+                    .tree.treeDemo13 {
+                        top: 0;
+                        left: 0;
+                        margin: 120% 0 0 40%;
+                    }
+                    .tree.treeDemo14 {
+                        top: 0;
+                        left: 0;
+                        margin: 140% 0 0 30%;
+                    }
+                    .tree.treeDemo15 {
+                        top: 0;
+                        left: 0;
+                        margin: 160% 0 0 22%;
+                    }
+                }
+                
+                @media screen and (min-width: 1200px) {
+                    /*  .tree>.treeImg>img {width: 60px;}*/
+                    .tree>.treeImg>span {
+                        font-size: 20px;
+                        color: #fff;
+                        position: absolute;
+                        z-index: 9;
+                        top: 20%;
+                        left: 37%;
+                    }
+                    #tree1 {
+                        top: 0;
+                        left: 0;
+                        margin: 38% 0 0 37%;
+                    }
+                    #tree2 {
+                        top: 0;
+                        left: 0;
+                        margin: 31% 0 0 48%;
+                    }
+                    #tree3 {
+                        top: 0;
+                        left: 0;
+                        margin: 52% 0 0 54%;
+                    }
+                    #tree4 {
+                        top: 0;
+                        left: 0;
+                        margin: 52% 0 0 31%;
+                    }
+                    #tree5 {
+                        top: 0;
+                        left: 0;
+                        margin: 80% 0 0 26%;
+                    }
+                    #tree6 {
+                        top: 0;
+                        left: 0;
+                        margin: 115% 0 0 20%;
+                    }
+                    #tree7 {
+                        top: 0;
+                        left: 0;
+                        margin: 120% 0 0 40%;
+                    }
+                    #tree8 {
+                        top: 0;
+                        left: 0;
+                        margin: 160% 0 0 22%;
+                    }
+                }
+                
+                @media screen and (min-width: 1300px) {
+                    /*  .tree>.treeImg>img {width: 80px;}*/
+                    /*  .tree>.treeImg>span {font-size: 34px;color: #fff;position: absolute;z-index: 9;top: 25%;left: 37%;}*/
+                    #tree1 {
+                        top: 0;
+                        left: 0;
+                        margin: 38% 0 0 37%;
+                    }
+                    #tree2 {
+                        top: 0;
+                        left: 0;
+                        margin: 31% 0 0 48%;
+                    }
+                    #tree3 {
+                        top: 0;
+                        left: 0;
+                        margin: 52% 0 0 54%;
+                    }
+                    #tree4 {
+                        top: 0;
+                        left: 0;
+                        margin: 52% 0 0 31%;
+                    }
+                    #tree5 {
+                        top: 0;
+                        left: 0;
+                        margin: 80% 0 0 26%;
+                    }
+                    #tree6 {
+                        top: 0;
+                        left: 0;
+                        margin: 115% 0 0 20%;
+                    }
+                    #tree7 {
+                        top: 0;
+                        left: 0;
+                        margin: 120% 0 0 40%;
+                    }
+                    #tree8 {
+                        top: 0;
+                        left: 0;
+                        margin: 160% 0 0 22%;
+                    }
+                }
+            </style>
+            <script type="text/javascript">
+                function chooseModal(argument) {
+                    // $(".tree.treeDemo").hide();
+                    // $(".treeModel"+argument).show();
+                    $("#w-dropdown-list-3").removeClass('w--open');
+
+                    $.ajax({
+                        type: "POST",
+                        url: "loadData",
+                        data: 'action=loadProvince&model=' + argument,
+                        success: function(html) {
+                            // console.log(html)
+                            // $("#message").html('บันทึกข้อมูลแล้ว');
+                            const myArray = html.split("|");
+                            $("#listProvince").html(myArray[0]);
+                            $("#listSchool").html(myArray[1]);
+                            // $("#listTree").html(myArray[2]);
+                            // $("#listProvince").css(html);
+                        },
+                        beforeSend: function() {
+                            // $("#message").html('กำลังบันทึกข้อมูล');
+                        }
+                    });
+                    // console.log(argument)
+                    $("#drp_camp_text_model").html('รุ่นที่ ' + argument);
+                }
+
+                function chooseModalOver(argument) {
+                    // $(".tree.treeDemo").hide();
+                    // $(".treeModel"+argument).show();
+                    // $(".treeModel"+argument).css("display", "block");
+                    // $("#drp_camp_text_model").html('รุ่นที่ '+argument);
+                }
+
+                function chooseCity(argument) {
+                    // $(".tree").hide();
+                    // $(".treeCity"+argument).show();
+                    $("#listProvince").removeClass('w--open');
+                    $.ajax({
+                        type: "POST",
+                        url: "loadData",
+                        data: 'action=loadSchoolCity&province=' + argument,
+                        success: function(html) {
+                            // console.log(html)
+                            // $("#message").html('บันทึกข้อมูลแล้ว');
+                            $("#listSchool").html(html);
+                            // $("#listSchool").css(html);
+                        },
+                        beforeSend: function() {
+                            // $("#message").html('กำลังบันทึกข้อมูล');
+                        }
+                    });
+                    // console.log($("#province"+argument).data('title'))
+                    $("#drp_camp_text_province").html($("#province" + argument).data('title'));
+                }
+
+                function chooseDistrict(argument) {
+                    // $(".tree").hide();
+                    // $(".treeDistrict"+argument).show();
+                    $("#listProvince").removeClass('w--open');
+                    $.ajax({
+                        type: "POST",
+                        url: "loadData",
+                        data: 'action=loadSchool&district=' + argument,
+                        success: function(html) {
+                            // console.log(html)
+                            // $("#message").html('บันทึกข้อมูลแล้ว');
+                            $("#listSchool").html(html);
+                            // $("#listSchool").css(html);
+                        },
+                        beforeSend: function() {
+                            // $("#message").html('กำลังบันทึกข้อมูล');
+                        }
+                    });
+                    $("#drp_camp_text_province").html($("#district" + argument).data('title'));
+                }
+
+                function viewSchool(argument) {
+                    $(".treeView").hide();
+                    $(".treeViewSchool" + argument).show();
+                }
+
+                function closeViewSchool(argument) {
+                    $(".treeView").hide();
+                }
+            </script>
+            <div class="colmap w-col w-col-6">
+                <div class="align-items-center">
+                    <address id="pppy_mapblock" class="pppy_mapblock"><img src="images/map-nan2.png" loading="lazy" alt="" id="pppy-map" class="pppy_map"></address>
+                    <!-- <div class="btn_province">จ.น่าน</div> -->
+                    <div id="listTree">
+
+                    </div>
+
+
+                    <div class="tree treeDemo treeDemo1"><img src="images/tree.png"></div>
+                    <div class="tree treeDemo treeDemo2"><img src="images/tree.png"></div>
+                    <div class="tree treeDemo treeDemo3"><img src="images/tree.png"></div>
+                    <div class="tree treeDemo treeDemo4"><img src="images/tree.png"></div>
+                    <div class="tree treeDemo treeDemo5"><img src="images/tree.png"></div>
+                    <div class="tree treeDemo treeDemo6"><img src="images/tree.png"></div>
+                    <div class="tree treeDemo treeDemo7"><img src="images/tree.png"></div>
+                    <div class="tree treeDemo treeDemo8"><img src="images/tree.png"></div>
+                    <div class="tree treeDemo treeDemo9"><img src="images/tree.png"></div>
+                    <div class="tree treeDemo treeDemo10"><img src="images/tree.png"></div>
+                    <div class="tree treeDemo treeDemo11"><img src="images/tree.png"></div>
+                    <div class="tree treeDemo treeDemo12"><img src="images/tree.png"></div>
+                    <div class="tree treeDemo treeDemo13"><img src="images/tree.png"></div>
+                    <div class="tree treeDemo treeDemo14"><img src="images/tree.png"></div>
+                    <div class="tree treeDemo treeDemo15"><img src="images/tree.png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="partner-pppy">
+    <div class="partnercontainer">
+        <h5 class="hl_rdblack">พันธมิตรร่วมเพาะพันธุ์ปัญญา</h5>
+        <div data-delay="4000" data-animation="slide" class="partnersliderwrapper w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="12" data-duration="500" data-infinite="true">
+            <div class="w-slider-mask">
+                <div class="partnerslidewrapper w-slide">
+                    <p class="partnersubhead">วิทยากรที่เข้าร่วมสร้างแรงบันดาลใจในโครงการ</p>
+                    <h2 class="partnersubkey">“ค่ายกล้าเรียน”</h2>
+                    <div class="w-layout-hflex flex-block-2">
+                        <div class="team-block-2">
+                            <div class="partner-card"><img src="images/pimjai.png" loading="lazy" alt="" class="partnerphoto"></div>
+                            <div class="partnerblockinfo">
+                                <h3 class="partnername">ศ.ดร.พิมพ์ใจ ใจเย็น</h3>
+                                <p class="partnersubtext">คณบดีสำนักวิชาวิทยาศาสตร์<br>และวิศวกรรมชีวโมเลกุล<br>สถาบันวิทยสิริเมธี (VISTEC)</p>
+                                <ul role="list" class="list w-list-unstyled">
+                                    <li>
+                                        <a href="#" class="w-inline-block w-lightbox"><img src="images/icon-coa-folder.png" loading="lazy" width="30" alt="">
+                                            <script type="application/json" class="w-json">
+                                                {
+                                                    "items": [{
+                                                        "_id": "651a3040342015fefc8ab435",
+                                                        "origFileName": "popup_1_พิมพ์ใจ.png",
+                                                        "fileName": "popup_1_พิมพ์ใจ.png",
+                                                        "fileSize": 270941,
+                                                        "height": 1600,
+                                                        "url": "images/popup_1_พิมพ์ใจ.png",
+                                                        "width": 800,
+                                                        "caption": "ศ.ดร.พิมพ์ใจ ใจเย็น",
+                                                        "type": "image"
+                                                    }],
+                                                    "group": "วิทยากร"
+                                                }
+                                            </script>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team-block-2">
+                            <div class="partner-card"><img src="images/nut.png" loading="lazy" alt="" class="partnerphoto"></div>
+                            <div class="partnerblockinfo">
+                                <h3 class="partnername">คุณณัฐวุฒิ พึงเจริญพงศ์</h3>
+                                <p class="partnersubtext">CEO และผู้ก่อตั้ง Ookbee<br>ผู้จัดการกองทุน 500 tuktuks<br>CEO SIX (crypto)</p>
+                                <ul role="list" class="list w-list-unstyled">
+                                    <li>
+                                        <a href="#" class="w-inline-block w-lightbox"><img src="images/icon-coa-folder.png" loading="lazy" width="30" alt="">
+                                            <script type="application/json" class="w-json">
+                                                {
+                                                    "items": [{
+                                                        "_id": "651a3046d51e49055aa272d5",
+                                                        "origFileName": "popup_2_ณัฐวุฒิ.png",
+                                                        "fileName": "popup_2_ณัฐวุฒิ.png",
+                                                        "fileSize": 237119,
+                                                        "height": 1391,
+                                                        "url": "images/popup_2_ณัฐวุฒิ.png",
+                                                        "width": 800,
+                                                        "caption": "คุณณัฐวุฒิ พึงเจริญพงศ์",
+                                                        "type": "image"
+                                                    }],
+                                                    "group": "วิทยากร"
+                                                }
+                                            </script>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team-block-2">
+                            <div class="partner-card"><img src="images/woranun.png" loading="lazy" alt="" class="partnerphoto"></div>
+                            <div class="partnerblockinfo">
+                                <h3 class="partnername">คุณวรกันต์ ธนโชติวรพงศ์</h3>
+                                <p class="partnersubtext">ร่วมก่อตั้ง บ.มอร์ฟู้ดส์ อินโนเทค จำกัดผลิตภัณฑ์โปรตีนจากพืช <br>แบรนด์ More Meat</p>
+                                <ul role="list" class="list w-list-unstyled">
+                                    <li>
+                                        <a href="#" class="w-inline-block w-lightbox"><img src="images/icon-coa-folder.png" loading="lazy" width="30" alt="">
+                                            <script type="application/json" class="w-json">
+                                                {
+                                                    "items": [{
+                                                        "_id": "651a30410a0477eb5c8e45a3",
+                                                        "origFileName": "popup_3_วรกันต์.png",
+                                                        "fileName": "popup_3_วรกันต์.png",
+                                                        "fileSize": 250697,
+                                                        "height": 1395,
+                                                        "url": "images/popup_3_วรกันต์.png",
+                                                        "width": 800,
+                                                        "caption": "คุณวรกันต์ ธนโชติวรพงศ์",
+                                                        "type": "image"
+                                                    }],
+                                                    "group": "วิทยากร"
+                                                }
+                                            </script>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team-block-2">
+                            <div class="partner-card"><img src="images/manoon.png" loading="lazy" alt="" class="partnerphoto"></div>
+                            <div class="partnerblockinfo">
+                                <h3 class="partnername">คุณมนูญ ทนะวัง</h3>
+                                <p class="partnersubtext">เจ้าของ <br>โกโก้ วัลเล่ย์ รีสอร์ท และคาเฟ่ <br>อ.ปัว จังหวัดน่าน</p>
+                                <ul role="list" class="list w-list-unstyled">
+                                    <li>
+                                        <a href="#" class="w-inline-block w-lightbox"><img src="images/icon-coa-folder.png" loading="lazy" width="30" alt="">
+                                            <script type="application/json" class="w-json">
+                                                {
+                                                    "items": [{
+                                                        "_id": "651a3041b14e72e8d4f0ca14",
+                                                        "origFileName": "popup_4_มนูญ.png",
+                                                        "fileName": "popup_4_มนูญ.png",
+                                                        "fileSize": 259364,
+                                                        "height": 1359,
+                                                        "url": "images/popup_4_มนูญ.png",
+                                                        "width": 800,
+                                                        "caption": "คุณมนูญ ทนะวัง",
+                                                        "type": "image"
+                                                    }],
+                                                    "group": "วิทยากร"
+                                                }
+                                            </script>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-slide-wrapper-2 w-slide">
+                    <p class="centered-subheading-3">วิทยากรที่เข้าร่วมสร้างแรงบันดาลใจในโครงการ</p>
+                    <h2 class="partner_sub_head">“ค่ายกล้าลุย”</h2>
+                    <div class="w-layout-hflex flex-block-2">
+                        <div class="team-block-2">
+                            <div class="partner-card"><img src="images/darin.png" loading="lazy" alt="" class="partnerphoto"></div>
+                            <div class="team-block-info-2">
+                                <h3 class="partnername">คุณดาริน สุทธพงษ์</h3>
+                                <p class="partnersubtext">CEO Hato Hub</p>
+                                <ul role="list" class="list w-list-unstyled">
+                                    <li>
+                                        <a href="#" class="w-inline-block w-lightbox"><img src="images/icon-coa-folder.png" loading="lazy" width="30" alt="">
+                                            <script type="application/json" class="w-json">
+                                                {
+                                                    "items": [{
+                                                        "_id": "651a30411d65ace284615877",
+                                                        "origFileName": "popup_5_ดาริน.png",
+                                                        "fileName": "popup_5_ดาริน.png",
+                                                        "fileSize": 222311,
+                                                        "height": 1202,
+                                                        "url": "images/popup_5_ดาริน.png",
+                                                        "width": 800,
+                                                        "caption": "คุณดาริน สุทธพงษ์",
+                                                        "type": "image"
+                                                    }],
+                                                    "group": "วิทยากร"
+                                                }
+                                            </script>
+                                        </a>
+                                    </li>
+                                    <li class="list-item-2">
+                                        <a href="#" class="partnerlightbox w-inline-block w-lightbox"><img src="images/icon-coa-vdo.png" loading="lazy" width="30" alt="">
+                                            <script type="application/json" class="w-json">
+                                                {
+                                                    "items": [{
+                                                        "url": "https://www.youtube.com/watch?v=ybI52-kdpzM",
+                                                        "originalUrl": "https://www.youtube.com/watch?v=ybI52-kdpzM",
+                                                        "width": 940,
+                                                        "height": 528,
+                                                        "thumbnailUrl": "https://i.ytimg.com/vi/ybI52-kdpzM/hqdefault.jpg",
+                                                        "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FybI52-kdpzM%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DybI52-kdpzM&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FybI52-kdpzM%2Fhqdefault.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
+                                                        "type": "video"
+                                                    }],
+                                                    "group": "คุณดาริน สุทธพงษ์"
+                                                }
+                                            </script>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team-block-2">
+                            <div class="partner-card"><img src="images/siriwat.png" loading="lazy" alt="" class="partnerphoto"></div>
+                            <div class="team-block-info-2">
+                                <h3 class="partnername">คุณศิริวัฒน์ วรเวทวุฒิคุณ</h3>
+                                <p class="partnersubtext">เจ้าของธุรกิจศิริวัฒน์แวนด์วิช</p>
+                                <ul role="list" class="list w-list-unstyled">
+                                    <li>
+                                        <a href="#" class="w-inline-block w-lightbox"><img src="images/icon-coa-folder.png" loading="lazy" width="30" alt="">
+                                            <script type="application/json" class="w-json">
+                                                {
+                                                    "items": [{
+                                                        "_id": "651a3042f37897084a263c40",
+                                                        "origFileName": "popup_6_ศิริวัฒน์.png",
+                                                        "fileName": "popup_6_ศิริวัฒน์.png",
+                                                        "fileSize": 182213,
+                                                        "height": 1221,
+                                                        "url": "images/popup_6_ศิริวัฒน์.png",
+                                                        "width": 800,
+                                                        "caption": "คุณศิริวัฒน์ วรเวทวุฒิคุณ",
+                                                        "type": "image"
+                                                    }],
+                                                    "group": "วิทยากร"
+                                                }
+                                            </script>
+                                        </a>
+                                    </li>
+                                    <li class="list-item-2">
+                                        <a href="#" class="partnerlightbox w-inline-block w-lightbox"><img src="images/icon-coa-vdo.png" loading="lazy" width="30" alt="">
+                                            <script type="application/json" class="w-json">
+                                                {
+                                                    "items": [{
+                                                        "url": "https://www.youtube.com/watch?v=lVUP3VQFgRQ",
+                                                        "originalUrl": "https://www.youtube.com/watch?v=lVUP3VQFgRQ",
+                                                        "width": 940,
+                                                        "height": 528,
+                                                        "thumbnailUrl": "http://i.ytimg.com/vi/lVUP3VQFgRQ/hqdefault.jpg",
+                                                        "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FlVUP3VQFgRQ&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DlVUP3VQFgRQ&image=http%3A%2F%2Fi.ytimg.com%2Fvi%2FlVUP3VQFgRQ%2Fhqdefault.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
+                                                        "type": "video"
+                                                    }],
+                                                    "group": "คุณศิริวัฒน์ วรเวทวุฒิคุณ"
+                                                }
+                                            </script>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-slide-wrapper-2 w-slide">
+                    <p class="centered-subheading-3">วิทยากรที่เข้าร่วมสร้างแรงบันดาลใจในโครงการ</p>
+                    <h2 class="partner_sub_head">“ค่ายกล้าก้าว”</h2>
+                    <div class="w-layout-hflex flex-block-2">
+                        <div class="team-block-2">
+                            <div class="partner-card"><img src="images/peanut.png" loading="lazy" alt="" class="partnerphoto"></div>
+                            <div class="team-block-info-2">
+                                <h3 class="partnername">คุณอารีย์ เพ็ชรรัตน์</h3>
+                                <p class="partnersubtext">กรรมการผู้จัดการ<br>บริษัท บ้านถั่วลิสง จำกัด<br>‍</p>
+                                <ul role="list" class="list w-list-unstyled">
+                                    <li>
+                                        <a href="#" class="w-inline-block w-lightbox"><img src="images/icon-coa-folder.png" loading="lazy" width="30" alt="">
+                                            <script type="application/json" class="w-json">
+                                                {
+                                                    "items": [{
+                                                        "_id": "651a3041b575d1272c0164e5",
+                                                        "origFileName": "popup_7_อารีย์.png",
+                                                        "fileName": "popup_7_อารีย์.png",
+                                                        "fileSize": 235138,
+                                                        "height": 1417,
+                                                        "url": "images/popup_7_อารีย์.png",
+                                                        "width": 800,
+                                                        "caption": "คุณอารีย์ เพ็ชรรัตน์",
+                                                        "type": "image"
+                                                    }],
+                                                    "group": "วิทยากร"
+                                                }
+                                            </script>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-slider-arrow-2 w-slider-arrow-left">
+                <div class="w-icon-slider-left"></div>
+            </div>
+            <div class="team-slider-arrow-2 w-slider-arrow-right">
+                <div class="w-icon-slider-right"></div>
+            </div>
+            <div class="team-slider-nav-2 w-slider-nav w-slider-nav-invert w-round"></div>
+        </div>
+    </div>
+</section>
+<section class="newsandmedia">
+    <div class="container-_index_vdo">
+        <a href="{url_main}/news-media" class="nag-buttontop w-button">ข่าวสารและมีเดีย</a>
+        <div class="w-layout-blockcontainer container-6 w-container">
+            {arrayNewsCategory}
+        </div>
+        <div data-delay="4000" data-animation="slide" class="team-slider-wrapper-4 w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="12" data-duration="500" data-infinite="true">
+            <div class="w-slider-mask">
+                <!-- START BLOCK : LISTNEWS -->
+                <div class="team-slide-wrapper-3 w-slide">
+                    <div class="mediablockcard">
+                        <a href='{url_main}/news/{id}'>
+                            <img src="{img}" loading="lazy" sizes="(max-width: 479px) 94vw, (max-width: 767px) 45vw, (max-width: 991px) 43vw,
+               (max-width: 1439px) 28vw, 282px" srcset="{img} 500w, {img} 800w, {img} 1080w" alt="" class="mediaphotocard">
+                        </a>
+                        <div class="mediablockinfo">
+                            <p class="mediatypedate"><strong>{titlecat}</strong> | {date}</p>
+                            <h3 class="mediaheadinfo">{title}</h3>
+                            <p class="mediasubdetail">{desc}</p>
+                            <a href="{url_main}/news/{id}" class="mediabuttonread w-button">อ่านต่อ</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END BLOCK : LISTNEWS -->
+
+            </div>
+            <div class="team-slider-arrow-3 w-slider-arrow-left">
+                <div class="w-icon-slider-left"></div>
+            </div>
+            <div class="team-slider-arrow-3 w-slider-arrow-right">
+                <div class="w-icon-slider-right"></div>
+            </div>
+            <div class="mediaslidnav w-slider-nav w-slider-nav-invert w-round"></div>
+        </div>
+    </div>
+</section>

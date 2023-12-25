@@ -19,16 +19,7 @@ FRONTLANGUAGE($_SESSION['lag']);
 ##########
 
 
-// $arrayNewsCategory = array();
-// $query = "SELECT * FROM `$tableNewsCategory` ORDER BY `ORDER` ASC ";
-// $result = $conn->query($query);
 
-// while($line = $result->fetch_assoc()){
-    
-//     if($line['ID']==2){$active=" active";}else{$active="";}
-// 		array_push($arrayNewsCategory, '<a href="'.$line['URL'].'" class="nag-button w-button'.$active.'" >'.$line['TITLE_'.$_SESSION['lagText']].'</a>');
-    
-// }
 
 if($_SESSION['lagText']=="EN"){
 	$arrayNewsCategory = array('<a href="'.$url_main.'/news" class="nag-button w-button">News</a>','<a href="'.$url_main.'/blog" class="nag-button w-button active">Blog</a>','<a href="'.$url_main.'/gallery" class="nag-button w-button">Gallery</a>');

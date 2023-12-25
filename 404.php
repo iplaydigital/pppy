@@ -22,5 +22,4 @@ FRONTLANGUAGE($_SESSION['lag']);
 
 
 FRONTPAGESEO('2',$_SESSION['lag']);
-//FRONTPAGESEO('2',1);
 $tpl->printToScreen();
