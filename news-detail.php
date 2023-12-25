@@ -1,7 +1,7 @@
 <?php error_reporting(E_ALL ^ E_NOTICE);
 
-include_once("./include/config.inc.php");
-include_once("./include/class.inc.php");
+include_once("../include/config.inc.php");
+//include_once("../include/class.inc.php");
 include_once("./include/class.TemplatePower.inc.php");
 include_once("./include/function.inc.php");
 
@@ -40,9 +40,6 @@ if($_GET['id']=='pao'){
 	$tpl->assign("_ROOT.page_title", "ถอดประสบการณ์ก้าวแรก &quot;นักธุรกิจรุ่นเยาว์&quot;");
 	$tpl->assign("_ROOT.logo_brand_alt", $Brand);
 
-}else{
-   // NOT FOUND
-   header('./404')
 }
 
 ##########

@@ -1,7 +1,7 @@
 
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^pohpunpanyafoundation\.org$
-RewriteRule (.*) https://www.pohpunpanyafoundation.org/$1 [R=301,L]
+RewriteRule (.*) https://code.pohpunpanyafoundation.org/$1 [R=301,L]
 
 ErrorDocument 404 /index.php
 #ErrorDocument 404 redirect /https://www.pohpunpanyafoundation.org
@@ -52,7 +52,7 @@ ErrorDocument 404 /index.php
 		RewriteRule ^pdpa$ pdpa.php
 
 		RewriteRule ^loadData$ loadDataCamp.php
-		RewriteRule ^404$ 404.php
+
 
 #news
 #

@@ -1,11 +1,11 @@
-<?php error_reporting(E_ALL ^ E_NOTICE);
+<?php error_reporting (E_ALL ^ E_NOTICE);
 /*****************************************************************
-Created :01/10/2023
+Created :01/10/2021
 Author : worapot bhilarbutra (pros.ake)
-E-mail : worapot.playdigital@gmail.com
-Website : https://www.playdigital.co.th
-Copyright (C) 2023-2024, Play Digital DEV all rights reserved.
- *****************************************************************/
+E-mail : worapot.bhi@gmail.com
+Website : https://www.vpslive.com
+Copyright (C) 2021-2025, VPS Live Digital togethers all rights reserved.
+*****************************************************************/
 
 ///////COUNTLANGUAGE////////////////////////////////////////////////
 function COUNTLANGUAGE($id){
@@ -43,13 +43,7 @@ function FRONTLANGUAGE($lag)
 	}
 	$tpl->assign("_ROOT.url_main",$url_main);
 }
-
-
-
-
-
-
-
+///////////////////////////////////////////////////////////////////
 ///////BACKLANGUAGE////////////////////////////////////////////////
 function BACKLANGUAGE($lag)
 {
@@ -129,6 +123,79 @@ global $tpl;
 	}
 
 }
+
+
+// 
+// function HILIGHT_UPDATE($table,$lag){
+// global $tpl;
+
+// $path1="../uploads/";
+// 	$query	= "SELECT * FROM `$table` WHERE `ID`='5' AND `STATUS`='Show'  AND `LAG`='$lag'";
+// 	$result	= mysql_query($query);
+// 	while($line = mysql_fetch_array($result)) {
+// 	$tpl->newBlock("HILIGHT1");
+// 	$tpl->assign("url",$line["URL"]);
+// 	$tpl->assign("title",$line["TITLE"]);
+// 	$tpl->assign("img",$path1."hilight/".$line["THUMB"]);
+// 	}
+
+// 	$query	= "SELECT * FROM `$table` WHERE `ID`='6' AND `STATUS`='Show'  AND `LAG`='$lag'";
+// 	$result	= mysql_query($query);
+// 	while($line = mysql_fetch_array($result)) {
+// 	$tpl->newBlock("HILIGHT2");
+// 	$tpl->assign("url",$line["URL"]);
+// 	$tpl->assign("title",$line["TITLE"]);
+// 	$tpl->assign("img",$path1."hilight/".$line["THUMB"]);
+// 	}
+
+// 	$query	= "SELECT * FROM `$table` WHERE `ID`='7' AND `STATUS`='Show'  AND `LAG`='$lag'";
+// 	$result	= mysql_query($query);
+// 	while($line = mysql_fetch_array($result)) {
+// 	$tpl->newBlock("HILIGHT3");
+// 	$tpl->assign("url",$line["URL"]);
+// 	$tpl->assign("title",$line["TITLE"]);
+// 	$tpl->assign("img",$path1."hilight/".$line["THUMB"]);
+// 	}
+
+// }
+
+
+
+// function HILIGHT_PRODUCTS($table,$lag){
+// global $tpl;
+
+// $nno=1;
+// $path1="../uploads/";
+// $str1="";
+// $img2="";
+// $img3="";
+
+// $query = "SELECT * FROM `$table` WHERE  `LAG`='$lag'
+// AND `STATUS`='Show' ";
+// 	$result = mysql_query($query);
+// 	while($line=mysql_fetch_array($result)){
+// 		if($nno==1){$tpl->newBlock("HIPRODUCT");
+// 		$nno=4;
+// 		 	}
+// 		 $tpl->newBlock("HIPRODUCT_1");
+
+// 			$img=$path1."hilight/".$line['THUMB'];
+// 			if($img2=="") $img2=$path1."hilight/".$line['IMG'];
+// 			if($line['THUMB']!="") $tpl->assign("IMG",$img);
+// 			$img2=$path1."hilight/".$line['IMG'];
+// 			if($line['IMG']!="") $tpl->assign("IMG2",$img2);
+// 			$tpl->assign("TITLE",$line['TITLE']);
+// 			$tpl->assign("LINK",$line['URL']);
+// 			if($str1==""){
+// 			$str1=$line['TITLE'];
+// 			$img3=$img2;
+// 			}
+// 			$nno--;
+// 		}
+// 		$tpl->assign("_ROOT.DF_TITLE_HIPRO",$str1);
+// 		$tpl->assign("_ROOT.DF_IMG_HIPRO",$img3);
+// }
+
 
 
 
@@ -399,6 +466,51 @@ global $lag;
 }
 
 
+///////MENUPRODUCT////////////////////////////////////////////////
+function MENUPRODUCT($lag){
+global $tpl;
+global $tableProductCatelogDetail;
+global $tableProductTypeDetail;
+global $tableProductToolsDetail;
+global $lag;
+
+		$query = "SELECT * FROM `$tableProductCatelogDetail` WHERE `LAG`='$lag' ORDER BY `ORDER` ASC";
+		$result = mysql_query($query);
+		while($line = mysql_fetch_array($result)) {
+			$tpl->newBlock("PRODUCT_CATALOG");
+			$tpl->assign("CATALOG_ID",$line["ID"]);
+			$tpl->assign("CATALOG_TITLE",$line["TITLE"]);
+
+			// $query2 = "SELECT * FROM `$tableProductTypeDetail` WHERE `ID_CAT`='".$line["ID"]."' AND `LAG`='$lag' ORDER BY `ORDER` ASC";
+			// $result2 = mysql_query($query2);
+			// while($line2 = mysql_fetch_array($result2)) {
+			// 	$tpl->assign("TYPE_ID2",$line2["ID"]);
+			// 	$tpl->assign("TYPE_TITLE2",$line2["TITLE"]);
+			// 	if(is_file("upload/product/type/".$line2['THUMB'])){
+			// 		$tpl->assign("img","upload/product/type/".$line2['THUMB']."");
+			// 	 }
+
+			// 	$tpl->newBlock("PRODUCT_TYPE");
+			// 	$tpl->assign("TYPE_ID",$line2["ID"]);
+			// 	$tpl->assign("TYPE_TITLE",$line2["TITLE"]);
+
+			// 	$tpl->assign("CATALOG_ID",$line["ID"]);
+
+			// 		$query3 = "SELECT * FROM `$tableProductToolsDetail` WHERE `ID_CAT`='".$line["ID"]."' AND `ID_TYPE`='".$line2["ID"]."' AND `LAG`='$lag' ORDER BY `ORDER` ASC";
+			// 		$result3 = mysql_query($query3);
+			// 		while($line3 = mysql_fetch_array($result3)) {
+			// 			$tpl->newBlock("PRODUCT_TOOLS");
+			// 			$tpl->assign("TOOLS_ID",$line3["ID"]);
+			// 			$tpl->assign("TOOLS_TITLE",$line3["TITLE"]);
+
+			// 			$tpl->assign("CATALOG_ID",$line["ID"]);
+			// 			$tpl->assign("TYPE_ID",$line2["ID"]);
+
+			// 		}
+			// }
+
+		}
+}
 
 /////////////////////////////////////////////////////
 
@@ -850,7 +962,60 @@ function SocialElements(){
 }
 
 
+function FirstBanner(){
+	global $tpl;
+	$query = "SELECT * FROM `tb_banner` WHERE `ID`='1'";
+	$result = mysql_query($query);
+	$line = mysql_fetch_array($result);
+	if($line["PAGE1"]!=""){
+	$tpl->newBlock("FIRST_BANNER");
+	$tpl->assign("img",$line['PAGE1']);
+	$tpl->assign("url",$line['URL1']);
+	}
+}
 
+function Banner_All(){
+	global $tpl;
+	$query = "SELECT * FROM `tb_banner` WHERE `ID`='1'";
+	$result = mysql_query($query);
+	$line = mysql_fetch_array($result);
+	if($line["PAGE2_1"]!=""){
+	$tpl->newBlock("BANNER1");
+	$tpl->assign("img",$line['PAGE2_1']);
+	$tpl->assign("url",$line['URL2']);
+	}
+	if($line["PAGE2_2"]!=""){
+	$tpl->newBlock("BANNER2");
+	$tpl->assign("img",$line['PAGE2_2']);
+	$tpl->assign("url",$line['URL3']);
+	}
+}
+
+function MenuProblemCAT($lag,$cat){
+	global $tpl;
+	$query = "SELECT * FROM `tb_problem_gtype_detail` WHERE `LAG`='$lag' ORDER BY `ID`";
+	$result = mysql_query($query);
+
+	while ($line = mysql_fetch_array($result)) {
+	$tpl->newBlock("CAT_PROBLEM");
+	$tpl->assign("id",$line['ID']);
+	$tpl->assign("title",$line['NAME']);
+		if($line['ID']==$cat){
+		$tpl->assign("active1"," style='background: none repeat scroll 0 0 #75AD31;'");
+		$tpl->assign("active2"," style='color: #FFFFFF;'");
+		}
+	}
+return true;
+}
+
+
+
+
+function GetMenuLAG($page_lang,$key,$group,$id){
+	global $tpl;
+	global $tableLag;
+	global $id;
+	global $conn;
 
 		//unset($_SESSION["page_lag"]);
 		$_SESSION['page_lag']=$page_lang;
@@ -903,6 +1068,32 @@ function SocialElements(){
 }
 
 
+
+
+
+function GetMenuAdmin($menu2){
+
+	global $tpl;
+	global $tableAdminMenu;
+	global $tableSetting;
+	global $conn;
+
+	$tpl->assign("_ROOT.login_name",$_SESSION['USERNAME']);
+	$tpl->assign("_ROOT.last_login",$_SESSION['LAST_LOGIN']);
+	$tpl->assign("_ROOT.user_id",$_SESSION['ID']);
+
+
+	if(is_file("../upload/user/".$_SESSION['THUMB'])){
+		$tpl->assign("_ROOT.login_thumb","../upload/user/".$_SESSION['THUMB']."");
+	}
+
+////////////////////////////////////////
+	// check menu subid
+	$sql = "SELECT * FROM `$tableAdminMenu` WHERE `ID` = '".$menu2."' AND `SHOW` = '0' ";
+	$query = $conn->query($sql) or die($conn->error);
+	while ($line = $query->fetch_assoc()) {
+		$subId = $line['SUB_ID'];
+	}
 ////////////////////////////////////////
 	$sql = "SELECT * FROM `$tableAdminMenu` WHERE `ID` IN({$_SESSION['PRIVILEGES']}) AND `SHOW` = '0' AND `SUB_ID` = '0' ORDER BY `ORDER` ASC";
 	$query = $conn->query($sql) or die($conn->error);
@@ -1060,6 +1251,17 @@ $query = "SELECT * FROM `tb_newstype_detail` WHERE `LAG`='1'  ORDER BY `NAME` AS
 		$tpl->assign("url","/products/group_detail.php?id=".$id3);
 		if($numsg2==0) $tpl->assign("url","#12");
 
+	// Select Sub Data
+
+		/*	$query_sub = "SELECT * FROM `tb_group` WHERE `LAG`='1' AND `GROUP`='".$line2["ID"]."' ORDER BY `ORDER` ASC";
+			$result_sub = mysql_query($query_sub);
+			while ($line_sub = mysql_fetch_array($result_sub)) {
+				$tpl->newBlock("MENU_PRODUCT");
+				//$tpl->assign("intGroupID",$line_sub["ID"]);
+				$tpl->assign("title","&nbsp;&nbsp;".$line_sub["NAME"]);
+				$id3=$line_sub["ID"];
+				$tpl->assign("url","/products/group_detail.php?id=".$id3);
+		}*/
 	}
 
 }
@@ -1575,4 +1777,128 @@ global $tableProductDetail;
 }
 
 
+/*
+function getPromotion($lag="1", $auth_data, $type = null){
+	$where = ' and CON ="1" ';
+	if(is_array($auth_data) && isset($auth_data['auth_mode']) && $auth_data['auth_mode']=='store'){
+		$where = ' and CUS ="1" ';
+	}
+	// $sql = 'select RELATED from tb_promotion_detail where LAG="'.mysql_real_escape_string($lag).'" and STARTDATE<="'.date('Y-m-d').'" and ENDDATE>="'.date('Y-m-d').'" and STATUS="Show" '.$where.' order by SUB desc';
+	// $result = mysql_query($sql);
+	// $rs = mysql_fetch_assoc($result);
+	// $data = explode(',',$rs['RELATED']);
+	// if(is_array($data) && count($data)>0){
+	// 	foreach($data as $key => $val){
+	// 		$data[$key] = trim($val);
+	// 	}
+	// }
+	return $data;
+}
+*/
 
+
+function getPromotion($auth_data, $lag = "1", $type = null) {
+    $where = ' and CON ="1" ';
+
+    if (is_array($auth_data) && isset($auth_data['auth_mode']) && $auth_data['auth_mode'] == 'store') {
+        $where = ' and CUS ="1" ';
+    }
+
+
+    return $data;
+}
+
+
+function sumPoint($product_set, $promotion_arr, $auth_mode=false, $lag = 1){
+	$setId = array();
+	foreach($product_set as $k => $v){
+		$setId[] = (int)intval($k);
+	}
+
+	if(count($setId)>0){
+		$point = 0;
+		$sum_price = 0;
+		$sql = 'select ID, PRICES from tb_product_detail where LAG="'.mysql_real_escape_string($lag).'" and ID in("'.implode('","',$setId).'") ';
+		$result = mysql_query($sql);
+		while($product_data = mysql_fetch_assoc($result)){
+			if(($auth_mode=='normal' && $product_data["CON_POINT"]==1) || ($auth_mode=='store' && $product_data["CUS_POINT"]==1)) {
+				$price = $product_data['CON_PRICE'];
+				if($auth_mode && $auth_mode=='store'){
+					$price = $product_data['CUS_PRICE'];
+				}
+				$num = $product_set[$product_data['ID']];
+
+				$vat_rate = number_format(($price*7/100), 2, '.', '');
+
+				$price = $price + $vat_rate;
+				$sum_price = $sum_price+($price*$num);
+				if(isset($product_data['ID']) && is_array($promotion_arr) && in_array($product_data['ID'], $promotion_arr)){
+					$promotion_data = getPromotionData($lag,$auth_mode);
+					if(isset($promotion_data['SPOINT']) && $promotion_data['SPOINT']>0)
+						$point = $point + ($num*$promotion_data['SPOINT']);
+				}
+
+			}
+		}
+		//echo $point; exit();
+		$point = $point + floor($sum_price/100);
+
+		return $point;
+	}
+}
+
+function productPoint($product_id, $num, $promotion_arr,$auth_mode=false, $lag = 1){
+	$data = array(
+		'normal_point' => 0,
+		'extra_point' => 0,
+		'point' => 0
+	);
+
+	$sql = 'select ID, PRICES from tb_product_detail where LAG="'.mysql_real_escape_string($lag).'" and ID ="'.mysql_real_escape_string($product_id).'" ';
+	$result = mysql_query($sql);
+	$product_data = mysql_fetch_assoc($result);
+	if(($auth_mode=='normal' && $product_data["CON_POINT"]==1) || ($auth_mode=='store' && $product_data["CUS_POINT"]==1)) {
+		$price = $product_data['CON_PRICE'];
+		if($auth_mode && $auth_mode=='store'){
+			$price = $product_data['CUS_PRICE'];
+		}
+
+		$vat_rate = number_format(($price*7/100), 2, '.', '');
+		$price = $price + $vat_rate;
+		$data['normal_point'] = ($price*$num)/100;
+		if(isset($product_data['ID']) && is_array($promotion_arr) && in_array($product_data['ID'], $promotion_arr)){
+			$promotion_data = getPromotionData($lag,$auth_mode);
+			if(isset($promotion_data['SPOINT']) && $promotion_data['SPOINT']>0)
+				$data['extra_point'] = $num*$promotion_data['SPOINT'];
+		}
+
+		$data['point'] = $data['normal_point'] + $data['extra_point'];
+
+	}
+
+	return $data;
+}
+
+function orderType($id=''){
+	$data = array(
+		"tranfer" => "โอนเงิน"
+	);
+	$return = $data;
+	if($id!='') $return = $data[$id];
+	return $return;
+}
+
+function orderStatus($id=''){
+	$data = array(
+		"new" => "สั่งซื้อใหม่",
+		"wait" =>"รอตรวจสอบ",
+		"cancel" =>"ยกเลิกใบสั่งซื้อ",
+		"keep" =>"เก็บใบสั่งซื้อไว้ ",
+		"payment" =>"ชำระเงินแล้ว",
+		"delivery" =>"ส่งของ",
+		"completed" =>"ได้รับของแล้ว"
+	);
+	$return = $data;
+	if($id!='') $return = $data[$id];
+	return $return;
+}

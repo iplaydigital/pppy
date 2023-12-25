@@ -11,7 +11,13 @@ $tpl = new TemplatePower("./template/_tp_master.html");
 $tpl->assignInclude("body", "template/_tp_contactus.html");
 $tpl->prepare();
 
+// if($_SESSION['lag']==''){$_SESSION['lag']=='1';}else{}
+// if($_POST['language']!=""){$_SESSION['lag'] = $_POST['language'];}
 
+// FRONTLANGUAGE($_SESSION['lag']);
+// FRONTPAGESEO('1',$_SESSION['lag']);
+// print_r($_POST);
+// echo '<p style="display:none;"></p>';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['g-recaptcha-response'])) {
 
         $url = 'https://www.google.com/recaptcha/api/siteverify';
@@ -28,13 +34,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['g-recaptcha-response
                 // echo "<div>การใช้งานถูกต้อง recaptcha ทำงาน</div>";
 
                 if($_POST['email']!=''){
-
 					$fname = $_POST['fname'];
 					$lname = $_POST['lname'];
 					$email = $_POST['email'];
 					$phone = $_POST['phone'];
 					$detail = $_POST['detail'];
-					
 
 					$arrData = array();
 					$arrData['FNAME'] = $fname;

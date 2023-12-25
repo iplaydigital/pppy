@@ -33,7 +33,7 @@
 // +----------------------------------------------------------------------+
 //
 // $Id: Version 3.0.2.1$
-// $Id: Version Extra 3.0.2.2$ support php8.2++
+// $Id: Version Extra 3.0.2.2$ support php7++
 // +----------------------------------------------------------------------+
 // | Update Script Support PHP8.0++                                       |
 // | P'Ake, P' Pae  https://www.vpslive.com                               |
