@@ -28,7 +28,7 @@ $db_config = array(
 date_default_timezone_set("Asia/Bangkok");
 $strDateTime  = date("Y-m-d h:i:s");
 $tnow          = date("h:i:s");
-$url_main = 'https://code.pohpunpanyafoundation.org';
+$url_main = 'https://dev.pohpunpanyafoundation.org';
 
 
 $iPod = stripos($_SERVER['HTTP_USER_AGENT'], "iPod");
